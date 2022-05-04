@@ -1,2 +1,2 @@
 # JavaScript-Sandbox
-Just learning how to start with the JavaScript. 
+Multiple files for practicing JavaScript.
