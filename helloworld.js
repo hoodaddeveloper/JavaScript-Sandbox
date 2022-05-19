@@ -1,6 +1,6 @@
 /* 
     This is a practice to understand
-    Javascript basics
+    JavaScript basics
 */
 
 // Declaring Variables
