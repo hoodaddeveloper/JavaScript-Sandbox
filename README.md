@@ -1,2 +1,2 @@
-# 00-JavaScript-Sandbox
+# JavaScript-Sandbox
 Multiple files for practicing JavaScript.
