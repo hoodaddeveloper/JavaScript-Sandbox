@@ -15,7 +15,7 @@ let generalInfo = {
     weight: 55,
     height: 177,
     hairColor: 'Black',
-    isAlive: true;
+    isAlive: true
 } // Object
 
 // Reassign the variable
