@@ -109,6 +109,6 @@ function myFunction() {
 
 myFunction();
 
-for (let counter = 0; counter < 11; counter++) {
+for (let counter = 0; counter < 10; counter++) {
   console.log(counter);
 }
