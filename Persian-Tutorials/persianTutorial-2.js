@@ -101,7 +101,7 @@ for (let key in person) {
 ///// Scope & Local Variables /////
 
 function myFunction() {
-  if (false) {
+  if (true) {
   let color = "blue";
   console.log(color);
   }
@@ -109,4 +109,4 @@ function myFunction() {
 
 myFunction();
 
-// sssss
+//ddddd
