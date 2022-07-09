@@ -111,4 +111,8 @@ myFunction();
 
 for (let counter = 0; counter < 10; counter++) {
   console.log(counter);
+
+  if (counter === 5) {
+    break;
+  }
 }
