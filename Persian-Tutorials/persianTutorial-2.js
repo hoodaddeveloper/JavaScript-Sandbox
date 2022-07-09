@@ -108,5 +108,3 @@ function myFunction() {
 }
 
 myFunction();
-
-//ddddd
