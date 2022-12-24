@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <title>JavaScript ES6 - Tutorials</title>
+  <style>
+    body {
+      background: linear-gradient(0deg, rgba(178, 255, 181, 1), rgba(174, 246, 255, 1) 70%);
+      background-attachment: fixed;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 id="hoodad1"></h2>
+  <h2 id="hoodad2"></h2>
+  <h2 id="hoodad3"></h2>
+  <h2 id="hoodad4"></h2>
+  <script>
+    let str = "Your new Text" + "<br>"; // Change the text to "Your new Text" and add a line break
+    document.querySelector("#hoodad1").innerHTML = str.startsWith("Your") ? "Yes" : "No"; // Check if the text starts with "Your"
+    document.querySelector("#hoodad2").innerHTML = str.endsWith("Text") ? "Yes" : "No"; // Check if the text ends with "text"
+    document.querySelector("#hoodad3").innerHTML = str.repeat(4); // Repeat the text 4 times
+
+    let str2 = "Hoodad's";
+    let age = 30;
+    message = `Welcome ot ${str2} Site. He is ${age - 3} years old.`; // Template Literals
+    document.querySelector("#hoodad4").innerHTML = message; // Welcome ot Hoodad's Site.
+    // or:
+    document.write(message + "<br>"); // Welcome ot Hoodad's Site.
+
+    ///// Arrays /////
+
+    const names = new Array("Ali", "Sam", "Reza", "Sara"); // Create a new array
+
+    names.forEach(names1 = (value, index) => document.write(`Value is: ${value} - Index is: ${index}` + "<br>"));
+    names.reverse(); // Reverse the array
+    names.forEach(names2 = (value, index) => document.write(`Value is: ${value} - Index is: ${index}` + "<br>"));
+
+    ///// Repeating /////
+
+    const myArray = new Array("Abbas", "AliAkbar", "Hossein", "Abolfazl"); // Create a new array
+
+    myArray.forEach(array1 = (value, index) => document.write(`Value is: ${value} - Index is: ${index}` + "<br>"));
+    myArray.reverse() // Reverse the array
+    myArray.forEach(array2 = (value, index) => document.write(`Value is: ${value} - Index is: ${index}` + "<br>"));
+
+    ///// .map() /////
+
+    let ferelden = new Map(); // Create a new map
+    ferelden.set("Abolfazl", "Abbas"); // Add a new key-value pair to the map
+    ferelden.set("Family", { description: "Abbasi" }); // Add a new key-value pair to the map
+
+    ///// .some() /////
+
+    let check = (number, index, array) => number >= 10; // Create a function that checks if the number is greater than or equal to 10
+    let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].some(check); // Check if any of the numbers in the array are greater than or equal to 10
+    document.write(arr1 + "<br>"); // Output: true
+
+    ///// .every() /////
+
+    let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].every(check); // Check if all of the numbers in the array are greater than or equal to 10
+    document.write(arr2 + "<br>"); // Output: false
+
+    let arr3 = [11, 22, 33, 44, 55, 66, 77, 88].every(check); // Check if all of the numbers in the array are greater than or equal to 10
+    document.write(arr3 + "<br>"); // Output: true
+
+    ///// Arrow Function /////
+
+    let x = (num) => document.write(`${num} * 5 = ${num * 5}`);
+    x(25);
+
+  </script>
+</body>
+
+</html>

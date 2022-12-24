@@ -109,10 +109,38 @@ function myFunction() {
 
 myFunction();
 
-for (let counter = 0; counter < 10; counter++) {
-  console.log(counter);
-
+for (let counter = 0; counter < 11; counter++) {
+  
   if (counter === 5) {
     break;
   }
+  
+  else if (counter === 3) {
+    continue;
+  }
+  console.log(counter);
 }
+
+///// Use the Conditional (Ternary) Operator /////
+
+function checkEqual(a, b) { // a and b are parameters
+  return a === b ? "Equal" : "Not Equal"; //ternary operator
+}
+
+data = checkEqual(1, 2);
+
+console.log(data); // "They are not equal"
+
+// Use Multiple Conditional (Ternary) Operators
+
+function checkSign(num) {
+  return num > 0 ? "positive"
+  : num < 0 ? "negative"
+  : "zero";
+}
+
+data = checkSign(10);
+
+console.log(data); // "positive"
+
+// Contine in persianTutorial-3.js ...

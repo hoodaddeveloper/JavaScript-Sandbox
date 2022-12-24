@@ -1,0 +1,132 @@
+body {
+  font-family: Arial;
+  background: radial-gradient(
+    circle,
+    rgba(244, 244, 244, 1) 6%,
+    rgba(194, 249, 255, 1) 21%
+  );
+}
+
+form {
+  padding-bottom: 12px;
+  text-align: center;
+  line-height: 40px;
+  width: 50%;
+  overflow: auto;
+  margin: 3% auto;
+  background: radial-gradient(
+    circle,
+    rgba(244, 244, 244, 1) 76%,
+    rgba(194, 249, 255, 1) 100%
+  );
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px 10px rgba(0, 81, 148, 0.5);
+}
+/* 2 Divs Styles */
+.main-1,
+.main-2 {
+  margin-left: 30%;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(0, 113, 166);
+  text-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
+}
+/* Inputs Styles */
+input {
+  border: rgb(114, 207, 250) 2px groove;
+  border-radius: 5px;
+}
+/* 3 Buttons Styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  background-color: rgb(114, 207, 250);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 3px 10px;
+  font-size: 16px;
+  margin: 0 6px;
+  cursor: pointer;
+}
+/* 3 Buttons Transitions */
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
+  background-color: rgb(59, 190, 251);
+  transition: 0.2s;
+}
+/* All Legends Styles */
+legend {
+  color: rgb(0, 113, 166);
+  text-shadow: 1px 1px 1px;
+  font-size: 20px;
+}
+/* All Fields Styles */
+.field-1 {
+  width: 62%;
+  margin: auto;
+  border: none;
+  border-radius: 30px;
+  padding-bottom: 22px;
+  background-color: rgb(206, 232, 244);
+  box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
+}
+
+.field-2 {
+  width: 62%;
+  margin: auto;
+  border: none;
+  border-radius: 30px;
+  padding-bottom: 22px;
+  background-color: rgb(206, 232, 244);
+  box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
+}
+
+.field-3 {
+  width: 62%;
+  margin: auto;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(206, 232, 244);
+  box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
+  margin-bottom: 15px;
+}
+/* All Labels Styles */
+label {
+  padding: 8px 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 38%,
+    rgba(233, 233, 233, 1) 91%
+  );
+  border-radius: 30px;
+  box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
+}
+/* Range Box Styles */
+input[type="range"] {
+  overflow: hidden;
+  width: 80px;
+  -webkit-appearance: none;
+  background-color: rgb(206, 232, 244);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: #13bba4;
+  margin-top: -1px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: ew-resize;
+  background: rgb(6, 172, 249);
+  box-shadow: -80px 0 0 80px rgb(125, 212, 252);
+}

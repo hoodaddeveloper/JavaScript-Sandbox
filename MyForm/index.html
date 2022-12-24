@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My From</title>
+</head>
+
+<body>
+  <form id="form" action="index.html" method="POST" target="_blank">
+    <h1>My Form</h1>
+    <!----- Search Input ----->
+    <fieldset class="field-1">
+      <legend>Search:</legend>
+      <label for="search">
+        <input type="search" name="search" id="search">
+        <input type="button" id="button" name="search" value="Search">
+      </label>
+    </fieldset>
+    <br>
+    <!----- Username Input ----->
+    <div class="main-1">
+      <label>Username: <input id="username" type="text" name="username" placeholder="Enter Your Username" minlength="4"
+          maxlength="10" pattern="[a-zA-Z0-9]+" required></label>
+      <br>
+      <!----- Email Input ----->
+      <label>Email: <input id="email" type="email" name="email" placeholder="Enter Your Email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required></label>
+      <br>
+      <!----- Age Input ----->
+      <label>Your Age: <input type="number" name="age" min="18" max="120" required></label>
+      <br>
+      <!----- Credit Card Input ----->
+      <label>Credit Card: <input type="text" name="credit" placeholder="Enter Your Card Number" pattern="[0-9]{14,16}"
+          required></label>
+      <br>
+      <!----- Password Input ----->
+      <label>Password: <input type="password" id="password" name="password" placeholder="Enter Your Password"
+          minlength="6" maxlength="20" onkeyup="checkPass();" required></label>
+      <br>
+      <label>Conf. Password: <input type="password" id="confirm-password" name="confirm-password"
+          placeholder="Confirm Your Password" minlength="6" maxlength="20" onkeyup="checkPass();" required></label>
+      <span id='message'></span>
+    </div>
+    <br>
+    <!----- Radio Input ----->
+    <fieldset class="field-2">
+      <legend>Choose:</legend>
+      <label>
+        <span>Your Gender:</span>
+        Male<input type="radio" name="radio" value="Male" required>
+        Female<input type="radio" name="radio" value="Female">
+      </label>
+      <br>
+      <!----- Checkbox Input ----->
+      <label>Your Hobbies:
+        Swimming <input type="checkbox" name="checkbox" value="swimming" checked>
+        Jogging <input type="checkbox" name="checkbox" value="jogging">
+        Gaming <input type="checkbox" name="checkbox" value="gaming">
+        Hiking <input type="checkbox" name="checkbox" value="hiking">
+      </label>
+    </fieldset>
+    <br>
+    <!----- Range Box ----->
+    <div class="main-2">
+      <label>Your Degree:
+        <span><b>Junior</b></span>
+        <input type="range" name="degree" id="degree" value="5" min="1" max="10">
+        <span><b>Senior</b></span>
+      </label>
+      <br>
+      <!----- Select Box ----->
+      <label>Select Your Country:
+        <select name="options" required>
+          <option value="">Select One</option>
+          <option value="Iran">Iran</option>
+          <option value="Canada">Canada</option>
+          <option value="Japan">Japan</option>
+          <option value="China">China</option>
+        </select>
+      </label>
+      <br>
+      <!----- Datalist ----->
+      <label for="member">Your Membership Type:
+        <input list="membership" id="member" name="member">
+        <datalist id="membership">
+          <option value="basic"></option>
+          <option value="plus"></option>
+          <option value="pro"></option>
+          <option value="vip"></option>
+        </datalist>
+      </label>
+      <br>
+      <!----- Upload File ----->
+      <label>Upload Profile Picture: <input type="file" name="file" accept="image/*"></label>
+    </div>
+    <br>
+    <!----- Textarea ----->
+    <fieldset class="field-3"">
+      <legend>Write About Yourself:</legend>
+      <textarea name=" description" rows="5" cols="50" placeholder="Write Here ..."></textarea>
+    </fieldset>
+    <!----- Submit & Reset ----->
+    <input type="submit" id="button" name="submit" value="Send">
+    <input type="reset" id="button" name="reset" value="Reset">
+  </form>
+
+  <!----- JavaScript Codes ----->
+  <script src="app.js"></script>
+
+</body>
+
+</html>

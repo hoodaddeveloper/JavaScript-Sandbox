@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <title>Modern JS with Silicium</title>
+  <style>
+    body {
+      height: 100vh;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #333;
+      background: linear-gradient(0deg, rgba(178, 255, 181, 1), rgba(174, 246, 255, 1) 70%);
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    document.write("Hello World from JS! <hr>");
+    let name = "Hoodad <br>";
+    document.write(name);
+
+    let data = "Lorem ipsum dolor Lorem sit amet Lorem consectetur Lorem adipisicing elit. Sunt eaque dicta suscipit perferendis ipsa, eius consequuntur numquam exercitationem quo optio quaerat nulla! Quis eligendi nihil deserunt cupiditate harum incidunt eius. Totam facere autem aliquid suscipit debitis fuga ipsum illo sit velit quia, quo, sint distinctio eius? Autem aliquid consequuntur laborum unde itaque aperiam, veritatis voluptates nihil! Ipsum blanditiis at rem? <br>";
+    // data = data.toLowerCase();	// converts to lowercase
+    // data = data.toUpperCase();	// converts to uppercase
+    document.write(data);
+
+    document.write("==> " + data[0] + data[1] + data[2] + data[3] + data[4] + "<br>"); // Lorem
+    document.write("==>" + data.slice(5, 11) + "<br>"); // ipsum
+    document.write("==>" + data.substr(11, 15) + "<br>"); // dolor sit amet
+    document.write("==> " + data.includes("Lorem") + "<br>"); // true
+    document.write("==> " + data.search("A") + "<br>"); // 331 (index of A)
+    document.write("Data length: " + data.length + "<br><br>"); // Data length: 444
+
+    ///// Ternery Operator /////
+
+    let age = 27; // Check if the age is 18 or older
+    let message = (age >= 18) ? "You are  adult." : "You are not adult.";
+    document.write(message + "<br>"); // You are adult
+
+    let money = 8000; // Check if the money is greater than or equal to 7000 then show message
+    let buyMercedes = (money >= 7000) ? "Yes you have the Mercedes!" : "You can't have the Mercedes.";
+    document.write(buyMercedes + "<br>"); // Yes you have the Mercedes!
+
+    let names = ["John", "Jane", "Mary", "Mark", "Bob"];
+    let check = names.includes("John") ? "Yes" : "No"; // Check if the array contains "John"
+    document.write(check + "<br>"); // Yes
+
+    ///// Change type of variable /////
+
+    let num = 220;
+    let str = num.toString(); // Convert number to string
+    document.write(str + "<br>");
+
+    let ms = "10";
+    let number = Number(ms); // Convert string to number
+    document.write(number + "<br>");
+
+    let boolean0 = Boolean(0);
+    let boolean1 = Boolean(1);
+    document.write(boolean0 + "<br>"); // false
+    document.write(boolean1 + "<br><br>"); // true
+
+    ///// Arrays /////
+
+    let budys = ["John", "Jane", "Mary", "Mark", "Bob"];
+
+    budys.push("Jack"); // Add to the end of the array
+    budys.unshift("Hoodad"); // Add to the beginning of the array
+    budys.pop("Jack"); // Remove the last element of the array
+    budys.shift("Jack"); // Remove the first element of the array
+    budys.sort(); // Sort the array in ascending order
+    // budys.reverse(); // Sort the array in descending order
+
+    document.write(budys.toString() + "<br>"); // convert array to string
+    document.write(budys.join(" | ") + "<br>"); // join array with " | "
+
+    let nums = [11, 2, 23, 4, 35, 6, 47, 8, 59, 10];
+    document.write(nums.sort((a, b) => a - b) + "<br>"); // Sort the numbers in ascending order
+
+    let list1 = [1, 2, 3, 4, 5];
+    let list2 = [6, 7, 8, 9, 10];
+    let list3 = ["Alice", "Bob", "Charlie"];
+    let list4 = ["Frank", "Gary", "Helen"];
+
+    let newlist = list1.concat(list2, list3, list4, "Mehran", "Taghi"); // Concatenate the arrays and strings into one array
+    document.write(newlist.join(" . ") + "<br>");
+
+    let students = [["Hoodad", 20, 19, 18], ["Ali", 17, 19, 20], ["Akbar", 17, 20, 18]];
+
+    document.write(students[0].join(" - ",) + "<br>");
+    document.write(students[1].join(" - ",) + "<br>");
+    document.write(students[2].join(" - ",) + "<br>");
+
+    ///// if else /////
+
+    myPoint = 20;
+
+    if (myPoint >= 15) {
+      document.write("Good" + "<br>");
+    } else if (myPoint >= 10) {
+      document.write("Not too bad" + "<br>");
+    } else {
+      document.write("Bad" + "<br>");
+    };
+
+    let Age = 19;
+
+    switch (Age) {
+      case 17:
+        document.write("Age is " + Age + " (You are under 18)" + "<br>");
+        break;
+      case 18:
+        document.write("Age is " + Age + " (You are 18)" + "<br>");
+        break;
+      case 19:
+        document.write("Age is " + Age + " (You are 19)" + "<br>");
+        break;
+      default:
+        document.write("Age is " + Age + " (You are adult)" + "<br>");
+        break;
+    };
+
+    document.write("<br>");
+
+    ///// for loop /////
+
+    let student1 = ["Hoodad", "Ali", "Akbar", "Mehran", "Taghi"];
+
+    for (x = 0; x < student1.length; x++) {
+      document.write(`Hello ${student1[x]}` + "<br>")
+    };
+
+    document.write("<br>");
+
+    ///// while loop /////
+
+    let student2 = ["Jack", "Hossein", "Naghi", "Reza", "Sue"];
+    let m = 0;
+
+    while (m < student2.length) {
+      document.write(`Salam ${student2[m]}` + "<br>")
+      m++;
+    }
+
+    document.write("<br>");
+
+    ///// do while loop /////
+
+    let student3 = ["Jack", "Hossein", "Naghi", "Reza", "Sue"];
+    let c = 0;
+
+    do {
+      document.write(`Hi ${student3[c]}` + "<br>")
+      c++;
+    } while (c < student3.length);
+
+    document.write("<br>");
+
+    ///// forEach loop /////
+
+    student3.forEach(s => document.write(`Hello ${s}` + "<br>"));
+  </script>
+</body>
+
+</html>

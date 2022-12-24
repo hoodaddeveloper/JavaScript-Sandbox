@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <title>Accordion & Arrow Project</title>
+  <style>
+    .accordion div span {
+      background-color: rgb(228, 227, 227);
+      border-bottom: 1px solid #ccc;
+      display: block;
+      cursor: pointer;
+      padding: 15px;
+    }
+
+    .accordion div:first-child span {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .accordion div:last-child span {
+      border-radius: 0 0 10px 10px;
+      border-bottom: 0;
+    }
+
+    .accordion div.show:last-child span {
+      border-radius: 0;
+    }
+
+    .accordion div.show:last-child div {
+      border-radius: 0 0 10px 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion div span:after {
+      content: "\002b";
+      float: right;
+    }
+
+    .accordion div.show span:after {
+      content: "\2212";
+    }
+
+    .accordion div span:hover,
+    .accordion div.show span {
+      background-color: #ccc;
+    }
+
+    .accordion div div {
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+      padding: 0 15px;
+    }
+
+    .accordion div.show div {
+      padding: 15px;
+    }
+
+    .scroll,
+    .scroll2 {
+      background-image: url("arrow.svg");
+      background-color: orange;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      border: 0;
+      cursor: auto !important;
+      width: 45px;
+      height: 45px;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .scroll2 {
+      background-color: green;
+      left: 20px;
+    }
+
+    .scroll.show,
+    .scroll2.show {
+      cursor: pointer !important;
+      opacity: 1;
+    }
+
+    .popup-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.5s;
+    }
+
+    .popup-wrapper.show {
+      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .popup {
+      position: fixed;
+      left: 50%;
+      top: 30%;
+      transform: translateX(-50%);
+      border: 1px solid;
+      border-radius: 7px;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s;
+    }
+
+    .popup.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .popup h4,
+    .popup div {
+      padding: 15px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .popup h4 span:after {
+      content: "\00D7";
+      float: right;
+      cursor: pointer;
+    }
+
+    .popup button {
+      float: right;
+      margin: 15px 20px;
+    }
+
+    /* CSS codes for color themes */
+    .theme div {
+      height: 20px;
+      width: 20px;
+      float: left;
+      margin-right: 5px;
+      cursor: pointer;
+      border: 1px solid #555;
+    }
+
+    .Light {
+      background: #fff;
+      color: #000;
+    }
+
+    .Dark {
+      background: #444;
+      color: #fff;
+    }
+
+    .Yellow {
+      background: rgb(246, 238, 177);
+      color: #000;
+    }
+
+    .Green {
+      background: rgb(190, 245, 195);
+      color: #000;
+    }
+
+    #selection {
+      margin-left: 10px;
+      border: 1px solid;
+      padding: 2px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div m-3>
+      <h1 id="header" class="btn-success btn">DOM</h1>
+
+      <!-- Color themes -->
+      <div class="theme">
+        <div data-color="Light" style="background-color:#fff"></div>
+        <div data-color="Dark" style="background-color:#000"></div>
+        <div data-color="Yellow" style="background-color:rgb(250, 236, 132)"></div>
+        <div data-color="Green" style="background-color:rgb(156, 247, 164)"></div>
+      </div>
+      <span id="selection">Default</span>
+      
+      <div class="content">
+        <p>My First Paragraph!</p>
+        <ul>
+          <li>
+            <Java></Java>Script <span style="display: none;">Primary</span>
+          </li>
+          <li>Node.js <span style="display: none;">Warning</span></li>
+          <li class="mb-3">Python <span style="display: none;">Danger</span></li>
+          <button class="mb-3 btn btn-primary">click!</button>
+        </ul>
+
+        <!-- Pop-up -->
+        <button class="popup-btn btn btn-primary" style="margin-bottom: 20px;">Open Pop-up</button>
+        <div class="popup">
+          <h4>My Pop-up Header<span class="popup-close"></span></h4>
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente non consectetur unde eos soluta
+            repellat veniam totam nisi, necessitatibus odio, voluptatem similique ullam voluptas exercitationem
+            consequatur, temporibus vitae magnam culpa.</div>
+          <button class="popup-close btn btn-primary">Close</button>
+        </div>
+
+        <div class="content">
+          <div class="accordion">
+            <!-- Wrapper -->
+            <div>
+              <span class="span1">My first accordion Element!</span>
+              <div>
+                Pork loin meatball swine, corned beef leberkas sausage rump shankle kevin salami biltong buffalo ground
+                round. Shankle short loin ham hock drumstick, salami hamburger t-bone spare ribs. Brisket picanha
+                fatback,
+                t-bone jerky beef pancetta. Beef ribs pork belly spare ribs drumstick biltong. Boudin alcatra andouille,
+                swine cupim t-bone chislic turkey shoulder. Kevin doner shoulder bacon ground round meatball short ribs
+                beef
+                ribs swine tenderloin <a href="http://google.com">alcatra</a> alcatra shankle bresaola.
+              </div>
+            </div>
+            <!-- Wrapper -->
+            <div class="show">
+              <span class="span2">My second accordion Element!</span>
+              <div>
+                Filet mignon kielbasa capicola jowl pork loin beef shankle ham hock meatball tongue. Meatball ham
+                biltong,
+                leberkas filet mignon capicola rump beef ribs flank pastrami sirloin chuck bacon ham hock fatback.
+                Tri-tip
+                sausage tenderloin, meatloaf andouille <a href="http://youtube.com">tenderloin</a> fatback jowl strip
+                steak
+                cow. Buffalo fatback ribeye biltong
+                ham hock ham leberkas bacon cow kevin. Rump meatloaf boudin, sirloin pastrami biltong capicola. Pork
+                chop
+                landjaeger brisket boudin.
+              </div>
+            </div>
+            <!-- Wrapper -->
+            <div>
+              <span class="span3">My third accordion Element!</span>
+              <div>
+                Bacon ipsum dolor amet porchetta spare ribs chislic buffalo shankle strip steak kielbasa meatloaf
+                sausage
+                pastrami venison. Pork belly ball tip chicken landjaeger capicola bresaola salami boudin short loin
+                drumstick sirloin. Swine <a href="http://gmail.com">meatball</a> ribs ham hock tenderloin shankle
+                kielbasa
+                leberkas pork belly. Meatball cow
+                short loin burgdoggen tenderloin corned beef chislic pork boudin doner beef ribs jowl capicola buffalo.
+                Biltong jowl swine ham hock, sausage salami meatball doner short loin pork belly buffalo pork. Bresaola
+                cupim cow andouille strip steak ham hock, drumstick beef. Prosciutto biltong spare ribs, picanha shankle
+                chicken ham hock sausage tenderloin rump tail jowl bresaola venison flank.
+              </div>
+            </div>
+            <!-- Wrapper -->
+            <div>
+              <span class="span4">My fourth accordion Element!</span>
+              <div>
+                Bacon ipsum dolor amet porchetta spare ribs chislic buffalo shankle strip steak kielbasa meatloaf
+                sausage
+                pastrami venison. Pork belly ball tip chicken landjaeger capicola bresaola salami boudin short loin
+                drumstick sirloin. Swine <a href="http://gmail.com">meatball</a> ribs ham hock tenderloin shankle
+                kielbasa
+                leberkas pork belly. Meatball cow
+                short loin burgdoggen tenderloin corned beef chislic pork boudin doner beef ribs jowl capicola buffalo.
+                Biltong jowl swine ham hock, sausage salami meatball doner short loin pork belly buffalo pork. Bresaola
+                cupim cow andouille strip steak ham hock, drumstick beef. Prosciutto biltong spare ribs, picanha shankle
+                chicken ham hock sausage tenderloin rump tail jowl bresaola venison flank.
+              </div>
+            </div>
+            <!-- Wrapper -->
+            <div>
+              <span class="span5">My fifth accordion Element!</span>
+              <div>
+                Bacon ipsum dolor amet porchetta spare ribs chislic buffalo shankle strip steak kielbasa meatloaf
+                sausage
+                pastrami venison. Pork belly ball tip chicken landjaeger capicola bresaola salami boudin short loin
+                drumstick sirloin. Swine <a href="http://gmail.com">meatball</a> ribs ham hock tenderloin shankle
+                kielbasa
+                leberkas pork belly. Meatball cow
+                short loin burgdoggen tenderloin corned beef chislic pork boudin doner beef ribs jowl capicola buffalo.
+                Biltong jowl swine ham hock, sausage salami meatball doner short loin pork belly buffalo pork. Bresaola
+                cupim cow andouille strip steak ham hock, drumstick beef. Prosciutto biltong spare ribs, picanha shankle
+                chicken ham hock sausage tenderloin rump tail jowl bresaola venison flank.
+              </div>
+            </div>
+          </div>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati voluptatem adipisci
+            earum officia
+            harum nemo quod Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis repellendus
+            voluptatem, eveniet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, impedit nisi
+            consectetur error repellendus necessitatibus accusamus, enim suscipit accusantium a magnam aperiam
+            blanditiis? A delectus corrupti perspiciatis, mollitia nulla neque.
+            Non recusandae obcaecati explicabo commodi eveniet ad minima, rerum porro aspernatur quis cum? Tempore in
+            perferendis eveniet veniam vero quisquam pariatur praesentium nesciunt optio officia. Qui asperiores dolores
+            culpa veritatis.
+            Ipsum vel tempora dolor sit expedita, inventore ut voluptatibus laudantium placeat nam numquam. Iste, quis.
+            Ad velit ratione hic soluta, sunt ducimus quidem exercitationem atque porro! Qui praesentium cupiditate
+            maiores. distinctio tempora iure mollitia facere dignissimos ab illo illum. Ex deleniti magni
+            hic laborum, suscipit veritatis quas. facere corrupti corporis esse labore praesentium, quisquam in suscipit
+            laudantium maiores,
+            repellat aut.</p>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati voluptatem adipisci
+            earum officia
+            harum nemo quod Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis repellendus
+            voluptatem, eveniet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, impedit nisi
+            consectetur error repellendus necessitatibus accusamus, enim suscipit accusantium a magnam aperiam
+            blanditiis? A delectus corrupti perspiciatis, mollitia nulla neque.
+            Non recusandae obcaecati explicabo commodi eveniet ad minima, rerum porro aspernatur quis cum? Tempore in
+            perferendis eveniet veniam vero quisquam pariatur praesentium nesciunt optio officia. Qui asperiores dolores
+            culpa veritatis.
+            Ipsum vel tempora dolor sit expedita, inventore ut voluptatibus laudantium placeat nam numquam. Iste, quis.
+            Ad velit ratione hic soluta, sunt ducimus quidem exercitationem atque porro! Qui praesentium cupiditate
+            maiores. distinctio tempora iure mollitia facere dignissimos ab illo illum. Ex deleniti magni
+            hic laborum, suscipit veritatis quas. facere corrupti corporis esse labore praesentium, quisquam in suscipit
+            laudantium maiores,
+            repellat aut.</p>
+          <h2 id="art">Articles</h2>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati voluptatem adipisci
+            earum officia
+            harum nemo quod Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis repellendus
+            voluptatem, eveniet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, impedit nisi
+            consectetur error repellendus necessitatibus accusamus, enim suscipit accusantium a magnam aperiam
+            blanditiis? A delectus corrupti perspiciatis, mollitia nulla neque.
+            Non recusandae obcaecati explicabo commodi eveniet ad minima, rerum porro aspernatur quis cum? Tempore in
+            perferendis eveniet veniam vero quisquam pariatur praesentium nesciunt optio officia. Qui asperiores dolores
+            culpa veritatis.
+            Ipsum vel tempora dolor sit expedita, inventore ut voluptatibus laudantium placeat nam numquam. Iste, quis.
+            Ad velit ratione hic soluta, sunt ducimus quidem exercitationem atque porro! Qui praesentium cupiditate
+            maiores. distinctio tempora iure mollitia facere dignissimos ab illo illum. Ex deleniti magni
+            hic laborum, suscipit veritatis quas. facere corrupti corporis esse labore praesentium, quisquam in suscipit
+            laudantium maiores,
+            repellat aut.</p>
+          <div class="accordion">
+            <!-- Wrapper -->
+            <div>
+              <span class="span6">New Accordion</span>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis hic molestias similique
+                qui quidem, alias in. Atque provident dignissimos at, enim illo, deleniti laborum, id suscipit maiores
+                dolores repudiandae.</div>
+            </div>
+            <div>
+              <span class="span7">New Accordion</span>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis hic molestias similique
+                qui quidem, alias in. Atque provident dignissimos at, enim illo, deleniti laborum, id suscipit maiores
+                dolores repudiandae.</div>
+            </div>
+            <div>
+              <span class="span8">New Accordion</span>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis hic molestias similique
+                qui quidem, alias in. Atque provident dignissimos at, enim illo, deleniti laborum, id suscipit maiores
+                dolores repudiandae.</div>
+            </div>
+            <div>
+              <span class="span9">New Accordion</span>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis hic molestias similique
+                qui quidem, alias in. Atque provident dignissimos at, enim illo, deleniti laborum, id suscipit maiores
+                dolores repudiandae.</div>
+            </div>
+            <div>
+              <span class="span10">New Accordion</span>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis hic molestias similique
+                qui quidem, alias in. Atque provident dignissimos at, enim illo, deleniti laborum, id suscipit maiores
+                dolores repudiandae.</div>
+            </div>
+          </div>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati voluptatem adipisci
+            earum officia
+            harum nemo quod Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis repellendus
+            voluptatem, eveniet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, impedit nisi
+            consectetur error repellendus necessitatibus accusamus, enim suscipit accusantium a magnam aperiam
+            blanditiis? A delectus corrupti perspiciatis, mollitia nulla neque.
+            Non recusandae obcaecati explicabo commodi eveniet ad minima, rerum porro aspernatur quis cum? Tempore in
+            perferendis eveniet veniam vero quisquam pariatur praesentium nesciunt optio officia. Qui asperiores dolores
+            culpa veritatis.
+            Ipsum vel tempora dolor sit expedita, inventore ut voluptatibus laudantium placeat nam numquam. Iste, quis.
+            Ad velit ratione hic soluta, sunt ducimus quidem exercitationem atque porro! Qui praesentium cupiditate
+            maiores. distinctio tempora iure mollitia facere dignissimos ab illo illum. Ex deleniti magni
+            hic laborum, suscipit veritatis quas. facere corrupti corporis esse labore praesentium, quisquam in suscipit
+            laudantium maiores,
+            repellat aut.</p>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati voluptatem adipisci
+            earum officia
+            harum nemo quod Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis repellendus
+            voluptatem, eveniet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, impedit nisi
+            consectetur error repellendus necessitatibus accusamus, enim suscipit accusantium a magnam aperiam
+            blanditiis? A delectus corrupti perspiciatis, mollitia nulla neque.
+            Non recusandae obcaecati explicabo commodi eveniet ad minima, rerum porro aspernatur quis cum? Tempore in
+            perferendis eveniet veniam vero quisquam pariatur praesentium nesciunt optio officia. Qui asperiores dolores
+            culpa veritatis.
+            Ipsum vel tempora dolor sit expedita, inventore ut voluptatibus laudantium placeat nam numquam. Iste, quis.
+            Ad velit ratione hic soluta, sunt ducimus quidem exercitationem atque porro! Qui praesentium cupiditate
+            maiores. distinctio tempora iure mollitia facere dignissimos ab illo illum. Ex deleniti magni
+            hic laborum, suscipit veritatis quas. facere corrupti corporis esse labore praesentium, quisquam in suscipit
+            laudantium maiores,
+            repellat aut.</p>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati voluptatem adipisci
+            earum officia
+            harum nemo quod Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis repellendus
+            voluptatem, eveniet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, impedit nisi
+            consectetur error repellendus necessitatibus accusamus, enim suscipit accusantium a magnam aperiam
+            blanditiis? A delectus corrupti perspiciatis, mollitia nulla neque.
+            Non recusandae obcaecati explicabo commodi eveniet ad minima, rerum porro aspernatur quis cum? Tempore in
+            perferendis eveniet veniam vero quisquam pariatur praesentium nesciunt optio officia. Qui asperiores dolores
+            culpa veritatis.
+            Ipsum vel tempora dolor sit expedita, inventore ut voluptatibus laudantium placeat nam numquam. Iste, quis.
+            Ad velit ratione hic soluta, sunt ducimus quidem exercitationem atque porro! Qui praesentium cupiditate
+            maiores. distinctio tempora iure mollitia facere dignissimos ab illo illum. Ex deleniti magni
+            hic laborum, suscipit veritatis quas. facere corrupti corporis esse labore praesentium, quisquam in suscipit
+            laudantium maiores,
+            repellat aut.</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button class="mb-3 btn btn-primary" onclick="this.innerHTML=Date()">Click me to see what time is it!</button>
+    <br><br><br><br>
+  </div>
+  <button class="scroll"></button>
+  <button class="scroll2"></button>
+
+  <!-- JavaScript Codes -->
+  <script src="app.js"></script>
+</body>
+
+</html>
