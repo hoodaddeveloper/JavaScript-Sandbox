@@ -8,12 +8,12 @@ body {
 }
 
 form {
-  padding-bottom: 12px;
-  text-align: center;
-  line-height: 40px;
   width: 50%;
   overflow: auto;
   margin: 3% auto;
+  line-height: 40px;
+  text-align: center;
+  padding-bottom: 12px;
   background: radial-gradient(
     circle,
     rgba(244, 244, 244, 1) 76%,
@@ -36,35 +36,35 @@ h1 {
 }
 /* Inputs Styles */
 input {
-  border: rgb(114, 207, 250) 2px groove;
   border-radius: 5px;
+  border: rgb(114, 207, 250) 2px groove;
 }
 /* 3 Buttons Styles */
-input[type="submit"],
 input[type="reset"],
+input[type="submit"],
 input[type="button"] {
-  background-color: rgb(114, 207, 250);
   border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 3px 10px;
-  font-size: 16px;
   margin: 0 6px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
+  padding: 3px 10px;
+  border-radius: 5px;
+  background-color: rgb(114, 207, 250);
 }
 /* 3 Buttons Transitions */
-input[type="submit"]:hover,
 input[type="reset"]:hover,
+input[type="submit"]:hover,
 input[type="button"]:hover {
-  box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
-  background-color: rgb(59, 190, 251);
   transition: 0.2s;
+  background-color: rgb(59, 190, 251);
+  box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
 }
 /* All Legends Styles */
 legend {
-  color: rgb(0, 113, 166);
-  text-shadow: 1px 1px 1px;
   font-size: 20px;
+  text-shadow: 1px 1px 1px;
+  color: rgb(0, 113, 166);
 }
 /* All Fields Styles */
 .field-1 {
