@@ -7,12 +7,12 @@
 body {
   height: 100vh;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(rgb(96, 197, 210), rgb(75, 88, 166));
-  font-family: sans-serif;
   color: white;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+  background: linear-gradient(rgb(96, 197, 210), rgb(75, 88, 166));
 }
 
 #hoodad {
@@ -21,17 +21,17 @@ body {
 }
 
 .icon img {
-  height: 256px;
   width: 256px;
+  height: 256px;
 }
 
 .location,
 .temperature {
-  height: 30vh;
   width: 50%;
+  height: 30vh;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 
 .temperature {
@@ -44,8 +44,8 @@ body {
 
 .degree-section {
   display: flex;
-  align-items: center;
   cursor: pointer;
+  align-items: center;
 }
 
 .degree-section span {
