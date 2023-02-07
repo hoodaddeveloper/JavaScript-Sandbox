@@ -91,10 +91,10 @@ legend {
   width: 62%;
   margin: auto;
   border: none;
+  margin-bottom: 15px;
   border-radius: 30px;
   background-color: rgb(206, 232, 244);
   box-shadow: 1px 1px 10px rgba(0, 81, 148, 0.5);
-  margin-bottom: 15px;
 }
 /* All Labels Styles */
 label {
@@ -109,24 +109,24 @@ label {
 }
 /* Range Box Styles */
 input[type="range"] {
-  overflow: hidden;
   width: 80px;
+  overflow: hidden;
   -webkit-appearance: none;
   background-color: rgb(206, 232, 244);
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
   height: 10px;
-  -webkit-appearance: none;
   color: #13bba4;
   margin-top: -1px;
+  -webkit-appearance: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   width: 10px;
-  -webkit-appearance: none;
   height: 10px;
   cursor: ew-resize;
+  -webkit-appearance: none;
   background: rgb(6, 172, 249);
   box-shadow: -80px 0 0 80px rgb(125, 212, 252);
 }
