@@ -66,19 +66,19 @@ function getLaterFirstLetter(string1, string2) {
 // Should return "blueberry"
 console.log(
   "getLaterFirstLetter('avocado', 'blueberry') returns: " +
-    getLaterFirstLetter("avocado", "blueberry")
+  getLaterFirstLetter("avocado", "blueberry")
 );
 
 // Should return "zebra"
 console.log(
   "getLaterFirstLetter('zebra', 'aardvark') returns : " +
-    getLaterFirstLetter("zebra", "aardvark")
+  getLaterFirstLetter("zebra", "aardvark")
 );
 
 // Should return null
 console.log(
   "getLaterFirstLetter('astro', 'afar') returns: " +
-    getLaterFirstLetter("astro", "afar")
+  getLaterFirstLetter("astro", "afar")
 );
 
 // Link to String.repeat() documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
@@ -97,13 +97,13 @@ function containsCake(string) {
 // Should return true
 console.log(
   "containsCake('I think cake is my soul mate.') returns: " +
-    containsCake("I think cake is my soul mate.")
+  containsCake("I think cake is my soul mate.")
 );
 
 // Should return false
 console.log(
   "containsCake('Pie is certainly the coolest dessert.') returns: " +
-    containsCake("Pie is certainly the coolest dessert.")
+  containsCake("Pie is certainly the coolest dessert.")
 );
 
 // Should return true

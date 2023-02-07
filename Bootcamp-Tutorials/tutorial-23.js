@@ -99,7 +99,7 @@ const shortenButton2 = document.querySelector("#shorten");
 const responseField2 = document.querySelector("#responseField");
 
 // Asynchronous functions
-const shortenUrl = () => {};
+const shortenUrl = () => { };
 
 // Clear page and call Asynchronous functions
 const displayShortUrl = (event) => {

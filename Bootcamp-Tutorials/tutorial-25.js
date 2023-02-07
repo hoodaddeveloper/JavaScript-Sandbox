@@ -18,12 +18,12 @@ throw Error('Username or password does not match');
   console.log(e);
 } */
 
-function capAllElements(arr){
-  try{
-  	arr.forEach((el, index, array) => {
+function capAllElements(arr) {
+  try {
+    arr.forEach((el, index, array) => {
       array[index] = el.toUpperCase();
     });
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 }
