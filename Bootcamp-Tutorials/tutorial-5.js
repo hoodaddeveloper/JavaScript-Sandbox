@@ -36,7 +36,7 @@ sayThanks(); // You cann call the function as many times as you want
 /////     Parameters and Arguments in a Function     /////
 
 function sayThanks(name) {
-  console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
+  console.log('Thank you for your purchase ' + name + '! We appreciate your business.');
 }
 
 sayThanks("Cole"); // Prints "Thank you for your purchase Cole! We appreciate your business."
@@ -45,16 +45,16 @@ sayThanks("Cole"); // Prints "Thank you for your purchase Cole! We appreciate yo
 
 // 1st Example
 
-function greeting (name = 'stranger') { // If the user doesn't enter a name, the default value of name is "stranger"
+function greeting(name = 'stranger') { // If the user doesn't enter a name, the default value of name is "stranger"
   console.log(`Hello, ${name}!`)
 }
- 
+
 greeting('Nick') // Output: Hello, Nick!
 greeting() // Output: Hello, stranger!
 
 // 2nd Example
 
-function makeShoppingList(item1 = "milk", item2 = "bread", item3 = "eggs"){
+function makeShoppingList(item1 = "milk", item2 = "bread", item3 = "eggs") {
   console.log(`Remember to buy ${item1}`);
   console.log(`Remember to buy ${item2}`);
   console.log(`Remember to buy ${item3}`);

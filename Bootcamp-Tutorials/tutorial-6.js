@@ -59,7 +59,7 @@ ourDog.name = ["Jax"]; // "Jax" is now the value of ourDog.name
 // or like this //
 ourDog["name"] = ["Buster"]; // "Buster" is now the value of ourDog.name
 
-console.log(ourDog["name"]); 
+console.log(ourDog["name"]);
 // or like this //
 console.log(ourDog.name);
 
@@ -111,7 +111,7 @@ const myStorage = {
     "inside": {
       "glove box": "maps",
       "passenger seat": "crumbs"
-     },
+    },
     "outside": {
       "trunk": "jack"
     }

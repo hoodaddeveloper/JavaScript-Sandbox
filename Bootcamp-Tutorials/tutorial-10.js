@@ -82,7 +82,7 @@ console.log(concept); // ['arrays', 'can', 'be']
 
 ///// Nested Arrays /////
 
- // 1:
+// 1:
 
 const nestedArr = [[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12]]; // creates a nested array
 console.log(nestedArr[1]); // [2, 3]
@@ -94,11 +94,11 @@ console.log(nestedArr[2][2]); // 6
 // 2:
 
 let numberClusters = [[1, 2], [3, 4], [5, 6,]];
-const target =  numberClusters[2][1]; // 6
+const target = numberClusters[2][1]; // 6
 
 ///// Loops /////
 
-const vacationSpots = ["Hoodad","Hasan", "Ali"];
+const vacationSpots = ["Hoodad", "Hasan", "Ali"];
 console.log(vacationSpots[0]); // 'Hoodad'
 console.log(vacationSpots[1]); // 'Hasan'
 console.log(vacationSpots[2]); // 'Ali'

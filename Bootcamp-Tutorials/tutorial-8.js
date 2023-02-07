@@ -21,9 +21,9 @@ console.log(newFunction()); // "Hello ES6 World"
 
 // Concise Body Arrow Functions
 
-const arrowFunction1 = () => {}; // Zero Parameter
-const arrowFunction2 = (parameter) => {}; // One Parameter
-const arrowFunction3 = (parameter1, parameter2, parameter3) => {}; // Two or more Parameters
+const arrowFunction1 = () => { }; // Zero Parameter
+const arrowFunction2 = (parameter) => { }; // One Parameter
+const arrowFunction3 = (parameter1, parameter2, parameter3) => { }; // Two or more Parameters
 const arrowFunction4 = (number) => number + number; // Single line function does not need curly braces
 
 // Example:
@@ -106,7 +106,7 @@ console.log(countdown2(6)); // [6, 5, 4, 3, 2, 1]
 function rangeOfNumbers(startNum, endNum) {
   return startNum === endNum
     ? [startNum]
-    : [...rangeOfNumbers(startNum, endNum - 1), endNum ];
+    : [...rangeOfNumbers(startNum, endNum - 1), endNum];
 }
 
 console.log(rangeOfNumbers(6, 7));

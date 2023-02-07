@@ -79,7 +79,7 @@ console.log(myArray5);
 
 // Example 1:
 
-const ourArray2 = []; 
+const ourArray2 = [];
 let j = 1;
 
 do {

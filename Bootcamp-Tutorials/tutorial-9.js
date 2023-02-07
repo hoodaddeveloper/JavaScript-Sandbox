@@ -124,10 +124,10 @@ console.log(callMyNightSky());
 // 1:
 
 const logSkyColor2 = () => {
-  let color3 = 'green'; 
+  let color3 = 'green';
   console.log(color3); // blue 
 };
- 
+
 logSkyColor2(); // blue 
 // console.log(color3); // ReferenceError
 
@@ -145,12 +145,12 @@ logVisibleLightWaves();
 // 1:
 
 let num = 50;
- 
+
 const logNum = () => {
   num = 110; // Take note of this line of code
   console.log(num);
 };
- 
+
 logNum(); // Prints 110
 console.log(num); // Prints 110
 
@@ -162,7 +162,7 @@ let stars2 = 'North Star';
 
 const callMyNightSky2 = () => {
   stars2 = 'Sirius';
-	return 'Night Sky: ' + satellite2 + ', ' + stars2 + ', ' + galaxy2;
+  return 'Night Sky: ' + satellite2 + ', ' + stars2 + ', ' + galaxy2;
 };
 
 console.log(callMyNightSky2());
@@ -175,14 +175,14 @@ console.log(callMyNightSky2(stars2));
 
 const logSkyColor3 = () => {
   const dusk = true;
-  let color3 = 'orange'; 
+  let color3 = 'orange';
   if (dusk) {
     let color3 = 'pink';
     console.log(color3); // pink
   }
   console.log(color3); // blue 
 };
- 
+
 logSkyColor3();
 // console.log(color3); // ReferenceError
 
@@ -190,7 +190,7 @@ logSkyColor3();
 
 const logVisibleLightWaves2 = () => {
   let lightWaves2 = 'Moonlight';
-	let region2 = 'The Arctic';
+  let region2 = 'The Arctic';
   if (region2 === 'The Arctic') {
     let lightWaves2 = 'Northern Lights';
     console.log(lightWaves2);
