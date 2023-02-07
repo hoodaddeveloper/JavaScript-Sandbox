@@ -86,7 +86,7 @@ delete circle2.radius2;
 delete circle2.draw2;
 
 circle2.color = "red";
-circle.draw2 = function () {};
+circle.draw2 = function () { };
 
 console.log(circle2);
 

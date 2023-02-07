@@ -87,18 +87,18 @@ console.log(hoodad2.getFullName()); */
 // 3:
 
 class Person2 {
-  constructor (fName, lName, age) {
-    this. firstName = fName;
-    this. lastName = lName;
-    this. age = age;
-}
+  constructor(fName, lName, age) {
+    this.firstName = fName;
+    this.lastName = lName;
+    this.age = age;
+  }
 
-sayHello() {
-  return `Hi my name is ${this.firstName} ${this.lastName}`;
+  sayHello() {
+    return `Hi my name is ${this.firstName} ${this.lastName}`;
   }
 }
 
-let Saideh = new Person2 ("Saideh", "Dehghani", 60);
+let Saideh = new Person2("Saideh", "Dehghani", 60);
 
 console.log(Saideh.sayHello());
 

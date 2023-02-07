@@ -63,7 +63,7 @@ console.log(kredit); // 1000 Euro Allowed
 let numbers = [1, 5, -4, 54, 33, 12, -1, 0, 10];
 let result;
 
-result = numbers.sort(function(x, y) { // sort() method sorts the array in ascending order
+result = numbers.sort(function (x, y) { // sort() method sorts the array in ascending order
   return x - y;
 });
 
