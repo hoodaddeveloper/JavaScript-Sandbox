@@ -94,13 +94,13 @@ const vampire = {
   }
 };
 
-const residence1 = vampire.residence; 
+const residence1 = vampire.residence;
 console.log(residence1); // Prints 'Transylvania'
 
-const { residence } = vampire; 
+const { residence } = vampire;
 console.log(residence); // Prints 'Transylvania'
 
-const { day } = vampire.preferences; 
+const { day } = vampire.preferences;
 console.log(day); // Prints 'stay inside'
 
 /// / ///
@@ -124,7 +124,7 @@ functionality.beep();
 ///// Built-in Object Methods /////
 
 const robot3 = {
-	model: 'SAL-1000',
+  model: 'SAL-1000',
   mobile: true,
   sentient: false,
   armor: 'Steel-plated',
@@ -141,7 +141,7 @@ const robotEntries = Object.entries(robot3)
 console.log(robotEntries);
 
 // Declare newRobot below this line:
-const newRobot2 = Object.assign({laserBlaster: true, voiceRecognition: true}, robot3);
+const newRobot2 = Object.assign({ laserBlaster: true, voiceRecognition: true }, robot3);
 
 console.log(newRobot2);
 

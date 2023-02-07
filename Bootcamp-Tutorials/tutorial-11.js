@@ -19,7 +19,7 @@ for (let i = 11; i > 0; i--) {
 ///// Looping through Arrays /////
 
 const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion'];
-for (let i = 0; i < animals.length; i++){
+for (let i = 0; i < animals.length; i++) {
   console.log(animals[i]); // Grizzly Bear Sloth Sea Lion
 }
 
@@ -73,12 +73,12 @@ while (currentCard != ['spade']) {
 
 let countString = '';
 let i = 0;
- 
+
 do {
   countString = countString + i;
   i++;
 } while (i < 11);
- 
+
 console.log(countString);
 
 // // //
@@ -96,11 +96,11 @@ do {
 
 for (let i = 0; i < 99; i++) {
   if (i > 3) {
-     break; // stops the loop after the 4th iteration
+    break; // stops the loop after the 4th iteration
   }
   console.log('Banana.');
 }
- 
+
 console.log('Orange you glad I broke out the loop!');
 
 // // //
