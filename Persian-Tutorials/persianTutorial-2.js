@@ -102,19 +102,19 @@ for (let key in person) {
 
 function myFunction() {
   if (true) {
-  let color = "blue";
-  console.log(color);
+    let color = "blue";
+    console.log(color);
   }
 }
 
 myFunction();
 
 for (let counter = 0; counter < 11; counter++) {
-  
+
   if (counter === 5) {
     break;
   }
-  
+
   else if (counter === 3) {
     continue;
   }
@@ -135,8 +135,8 @@ console.log(data); // "They are not equal"
 
 function checkSign(num) {
   return num > 0 ? "positive"
-  : num < 0 ? "negative"
-  : "zero";
+    : num < 0 ? "negative"
+      : "zero";
 }
 
 data = checkSign(10);

@@ -25,7 +25,8 @@ let myObject = {
   motor: {
     type: "V8",
     horsepower: "500",
-    torque: "500"},
+    torque: "500"
+  },
   adress: ["Robert-Koch-Strasse", "Berlin", "Germany"],
   color: "white",
   price: "gratis!",
