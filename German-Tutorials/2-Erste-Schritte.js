@@ -38,5 +38,6 @@ let dayOfMonth = (new Date()).getDate()
 let monthname = (new Date()).toLocaleDateString(["de", "en"], "long")
 
 // Das aktuelle Jahr (Schreibweise 1)
+let year1 = (new Date()).getFullYear()
 
 // Das aktuelle Jahr (Schreibweise 2)
