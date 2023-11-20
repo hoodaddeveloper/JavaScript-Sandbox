@@ -28,3 +28,15 @@ console.log("5" + "5") // 55
 let mineralWasser = 2
 let plusPland = 0.25 + mineralWasser
 console.log(plusPland)
+
+///// Aufgaben /////
+
+// Tag im Monat
+let dayOfMonth = (new Date()).getDate()
+
+// Der Name aktuellen Monats
+let monthname = (new Date()).toLocaleDateString(["de", "en"], "long")
+
+// Das aktuelle Jahr (Schreibweise 1)
+
+// Das aktuelle Jahr (Schreibweise 2)
