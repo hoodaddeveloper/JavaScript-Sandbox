@@ -1,4 +1,4 @@
-"Use Strict"
+// Use Strict
 
 let greeting = "--- Hallo Hoodad! ---"
 
@@ -21,4 +21,4 @@ console.log(greeting.toLowerCase()) // --- hallo hoodad! ---
 console.log(greeting.replace("Hoodad", "Khafas")) // --- Hallo Khafas! ---
 
 // Zeichen rechts und links vom String entfernen
-console.log(greeting.indexOf("-", 10)) // 18
+console.log(greeting.trim()) // Entfernt die Leerzeichen links und rechts
