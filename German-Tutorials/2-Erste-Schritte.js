@@ -23,3 +23,8 @@ console.log(positiv)
 // Use Strict
 console.log(5 + 5) // 10
 console.log("5" + "5") // 55
+
+// Wasser
+let mineralWasser = 2
+let plusPland = 0.25 + mineralWasser
+console.log(plusPland)
