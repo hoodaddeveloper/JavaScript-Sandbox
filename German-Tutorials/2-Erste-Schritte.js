@@ -33,12 +33,16 @@ console.log(plusPland)
 
 // Tag im Monat
 let dayOfMonth = (new Date()).getDate()
+console.log(dayOfMonth)
 
 // Der Name aktuellen Monats
-let monthname = (new Date()).toLocaleDateString(["de", "en"], {year: "long"})
+let monthName = (new Date()).toLocaleDateString(["de", "en"], {month: "long"})
+console.log(monthName)
 
 // Das aktuelle Jahr (Schreibweise 1)
 let year1 = (new Date()).getFullYear()
+console.log(year1)
 
 // Das aktuelle Jahr (Schreibweise 2)
 let year2 = (new Date()).toLocaleDateString(["de", "en"], {year: "numeric"})
+console.log(year2)
