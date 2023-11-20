@@ -18,7 +18,7 @@ console.log(greeting.toUpperCase()) // --- HALLO HOODAD! ---
 console.log(greeting.toLowerCase()) // --- hallo hoodad! ---
 
 // Text ersetzen
-console.log(greeting.indexOf("-", 10)) // 18
+console.log(greeting.replace("Hoodad", "Khafas")) // --- Hallo Khafas! ---
 
 // Zeichen rechts und links vom String entfernen
 console.log(greeting.indexOf("-", 10)) // 18
