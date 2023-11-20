@@ -41,3 +41,4 @@ let monthname = (new Date()).toLocaleDateString(["de", "en"], "long")
 let year1 = (new Date()).getFullYear()
 
 // Das aktuelle Jahr (Schreibweise 2)
+let year2 = (new Date()).toLocaleDateString(["de", "en"], {year: "numeric"})
