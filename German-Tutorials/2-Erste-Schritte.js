@@ -19,3 +19,7 @@ let positiv = true
 let negativ = false
 console.log(typeof positiv)
 console.log(positiv)
+
+// Use Strict
+console.log(5 + 5) // 10
+console.log("5" + "5") // 55
