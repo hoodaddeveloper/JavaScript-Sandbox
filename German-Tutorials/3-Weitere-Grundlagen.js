@@ -22,3 +22,9 @@ console.log(greeting.replace("Hoodad", "Khafas")) // --- Hallo Khafas! ---
 
 // Zeichen rechts und links vom String entfernen
 console.log(greeting.trim()) // Entfernt die Leerzeichen links und rechts
+
+// New line
+console.log("Hello\nHoodad")
+
+// String wiederholen
+console.log("Hoodad ".repeat(5)) // Hoodad Hoodad Hoodad Hoodad Hoodad 
