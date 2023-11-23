@@ -33,3 +33,13 @@ friends = ["Lili", "Lola", "Leyla", "Ladan"]
 console.log(friends.indexOf(("Lola")))
 console.log(friends.sort())
 console.log(friends.reverse())
+
+// String to Array
+
+let shop = "apple, orange, Banana"
+console.log(shop.split(",")) // [ 'apple', ' orange', ' Banana' ]
+
+// Array to String
+
+let shop2 = ['apple', 'orange', 'Banana']
+console.log(shop2.join(", ")) // apple, orange, Banana
