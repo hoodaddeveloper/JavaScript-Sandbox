@@ -25,3 +25,7 @@ let greeting = "Guten Morgen"
 
 greeting = greeting + "!"
 console.log(greeting)
+
+friends = ["Lili", "Lola", "Leyla", "Ladan"]
+
+console.log(students.indexOf(("Lola")))
