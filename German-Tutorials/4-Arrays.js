@@ -20,3 +20,8 @@ console.log(students)
 // Overwrite an element
 students[0] = "Michael"
 console.log(students)
+
+let greeting = "Guten Morgen"
+
+greeting = greeting + "!"
+console.log(greeting)
