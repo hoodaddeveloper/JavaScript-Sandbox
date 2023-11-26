@@ -24,3 +24,6 @@ if (students < 10) {
 } else {
   console.log("mehr als 10")
 }
+
+////// Funktionen //////
+
