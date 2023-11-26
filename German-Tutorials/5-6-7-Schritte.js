@@ -27,3 +27,13 @@ if (students < 10) {
 
 ////// Funktionen //////
 
+let name = "Ali"
+
+function sayHello() {
+  console.log("Hello " + name + "!")
+}
+
+
+sayHello() //
+name = "Erika"
+sayHello() //
