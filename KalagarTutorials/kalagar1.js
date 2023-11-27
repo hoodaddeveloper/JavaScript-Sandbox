@@ -16,8 +16,9 @@ console.log(person["name"]) // Hoodad
 
 ///// Functions /////
 
-function greet() {
-  console.log("Hii")
+function greet(name, familyName) {
+  console.log("Hii " + name + " " + familyName)
 }
 
-greet()
+greet("Hoodad", "Khafas")
+greet("Mohsen", "Ashrafzadeh")
