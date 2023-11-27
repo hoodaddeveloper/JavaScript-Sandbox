@@ -13,3 +13,11 @@ console.log(person.name) // Hoodad
 
 // Brocket notation
 console.log(person["name"]) // Hoodad
+
+///// Functions /////
+
+function greet() {
+  console.log("Hii")
+}
+
+greet()
