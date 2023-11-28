@@ -27,10 +27,10 @@ if (students < 10) {
 
 ////// Funktionen //////
 
-function sayHello(name) {
-  console.log("Hello " + name + "!")
+function sayHello(name, familienName) {
+  console.log("Hello " + name + " " + familienName + "!")
 }
 
 
-sayHello("Ali") // Hello Ali!
-sayHello("Erika") // Hello Erika!
+sayHello("Ali", "Hosseini") // Hello Ali Hosseini!
+sayHello("Erika", "Anderson") // Hello Erika Anderson!
