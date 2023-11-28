@@ -22,3 +22,11 @@ function greet(name, familyName) {
 
 greet("Hoodad", "Khafas")
 greet("Mohsen", "Ashrafzadeh")
+
+function square(number) {
+  return number * number
+}
+
+console.log(square(2)) // 4
+console.log(square(4)) // 16
+console.log(square(5)) // 25
