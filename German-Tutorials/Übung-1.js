@@ -1,13 +1,13 @@
-function f3(x, y) {
+function f3(x, y) { // x = 10, y = 20
   console.log("F3")
-  let a = y - 1;
-  let b = x + 1;
-  let c = a + b;
-  x = x + y;
-  y = y - x;
+  let a = y - 1; // 19
+  let b = x + 1; // 11
+  let c = a + b; // 30
+  x = x + y; // 30
+  y = y - x; // -10
   console.log("F3 x=", x, " y=", y);
   console.log("F3 a=", a, " b=", b, " c=", c);
-  return x + y;
+  return x + y; // 30 + -10 = 20
 }
 
 function f2(x, y) {
