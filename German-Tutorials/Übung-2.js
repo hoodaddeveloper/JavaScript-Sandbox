@@ -38,8 +38,8 @@ async function berechneFahrpreis(ziel: string): Promise<number> {
 
 async function main() {
   console.log("Fahrkarten Automat");
-  const ziel: "Bergheim" = await eingabe("Wohin wollen Sie fahren? ", "String") as string;
-  const bc: "Bahncard" = await eingabe("Bahncard 50, 25, 0? ", "Int") as number;
+  const ziel: "Bergheim" = await eingabe("Wohin wollen Sie fahren? ", "String") as "Bergheim";
+  const bc: 50 = await eingabe("Bahncard 50, 25, 0? ", "Int") as 50;
 
   // More functions and logic to be added here
 
@@ -65,18 +65,18 @@ function main(): void
 {
   console.log("Fahrkarten Automat");
   let ziel: string = eingabe("Wohin wollen Sie fahren?", "String") as string; // Variable für das Ziel bsp. HH
-  let bc: number = eingabe("Bahncard 50, 25, 0?", "Int") as number;           //Variable (Zahl) für Bahncard: 50, 25 (alles andere ist falsch)
-  let hinzu = 0;                                                              //Variable (zahl oder boolean) für Eingabe: für Hin und Rückfahrt
-  let preis = 0;                                                              //Die wichtigste Variable der Preis, die an jede weiter Funktion zu schicken ist
+  let bc: number = eingabe("Bahncard 50, 25, 0?", "Int") as number;           // Variable (Zahl) für Bahncard: 50, 25 (alles andere ist falsch)
+  let hinzu = 0;                                                              // Variable (zahl oder boolean) für Eingabe: für Hin und Rückfahrt
+  let preis = 0;                                                              // Die wichtigste Variable der Preis, die an jede weiter Funktion zu schicken ist
 
   *******************************************************
 
   // Und nun sollten die Funktionen ausgearbeitet werden:
 
   // preis = berechneFahrpreis(ziel);                         => Hamburg(HH), Berlin(B), München(M), Saarbrücken(SB)
-  // preis = hinUndRueck(preis);                              =>Bitte nur aufrufen wenn hinzu=1(true) false(0),
-  // preis = bahncard(preis, bd)                              =>Bitte nur aufrufen wenn bc 25 oder 50
-  // bezahlen(preis);                                         =>In dieser Funktion wird auch durch Kunden Eingabe bezahlt => eingabe() int Methode
+  // preis = hinUndRueck(preis);                              => Bitte nur aufrufen wenn hinzu=1(true) false(0),
+  // preis = bahncard(preis, bd)                              => Bitte nur aufrufen wenn bc 25 oder 50
+  // bezahlen(preis);                                         => In dieser Funktion wird auch durch Kunden Eingabe bezahlt => eingabe() int Methode
 }
 */
 
