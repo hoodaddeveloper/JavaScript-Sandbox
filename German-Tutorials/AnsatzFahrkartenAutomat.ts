@@ -42,10 +42,15 @@ function fahrpreis(ziel: string): number {
   return preis;
 }
 
+function HbinUndRueck(ziel: string): boolean {
+  let preis = 0
+}
+
 async function main(): Promise<void> {
   console.log("Fahrkarten Automat");
   const ziel: string = await eingabe("Wohin wollen Sie fahren? ", "String") as string;
   const bc: number = await eingabe("Bahncard 50, 25, 0? ", "Int") as number;
+  const ruek: boolean = await eingabe("Möchten Sie zurückfahren?") as boolean;
 
   let preis = fahrpreis(ziel);
   console.log(preis);
@@ -58,11 +63,11 @@ main();
 
 // Das Programm Fahrkarten Automat die einen Fahrkartenautomat simuliert
  
-// Message ist "Wohin wollen Sie fahren?" oder "Bahncard 50, 25, 0?".
+// Message ist "Wohin wollen Sie fahren? " oder "Bahncard 50, 25, 0? ".
 // Eingabe aller werte: Ziel (Eingabe der Stadt), Hin und zurück (Eingabe als 1:0, True:False, ja:nein, Bahncard (Eingabe 25, 50, 0).
 // Fahrpreise nach Ziel findet man in bahn.de.
-// Ziele sind Berlin, Hamburg, München, Ulm, Koeln von deinem Heimatort aus.
-// Erst wird die Funktion berechneFahrpreis (ziel) aufgerufen.
-// HbinUndRueck (preis) => wenn man hin und zurück mit ja oder true preis * 2.
-// Berechne Bahncard (preis, bc) => Wenn man Bahncard 50 oder 25 eingegeben hat.
-// bezahlen (preis) => hier bitte die function eingabe(message, datatyp) zum zahlen verwenden.
+// Ziele sind Berlin, Hamburg, München, Ulm, Köln von deinem Heimatort aus.
+// Erst wird die Funktion berechneFahrpreis(ziel) aufgerufen.
+// HbinUndRueck(preis) => wenn man hin und zurück mit ja oder true preis * 2.
+// BerechneBahncard(preis, bc) => Wenn man Bahncard 50 oder 25 eingegeben hat.
+// bezahlen(preis) => hier bitte die function eingabe(message, datatyp) zum zahlen verwenden.
