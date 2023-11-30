@@ -22,7 +22,7 @@ function fahrpreis(ziel: string): number {
       break;
     case "Köln":
     case "köln":
-      preis = 11
+      preis = 50
       break;
     case "Berlin":
     case "berlin":
@@ -42,19 +42,48 @@ function fahrpreis(ziel: string): number {
   return preis;
 }
 
-function HbinUndRueck(ziel: string): boolean {
-  let preis = 0
+function HinUndRueck(preis: number): number {
+  return preis * 2;
+}
+
+function BerechneBahncard(preis: number, bc: number): any {
+  if (bc == 50) {
+    return preis / 2;
+  }
+  else if (bc == 25) {
+    return preis * 0.75;
+  }
+}
+
+async function bezahlen(preis: number) {
+  console.log("Sie müssen " + preis + " Euro bezahlen.");
+  const bezahlt: number = await eingabe("Bitte bezahlen Sie ", "Float") as number;
+
+  if (preis == bezahlt) {
+    console.log("Hier Ihre Fahrkarte")
+  }
+  else if (preis < bezahlt) {
+    console.log("Hier Ihr Restgeld und die Fahrkarte")
+  }
+  else if (preis > bezahlt) {
+    bezahlen(preis - bezahlt);
+  }
 }
 
 async function main(): Promise<void> {
   console.log("Fahrkarten Automat");
   const ziel: string = await eingabe("Wohin wollen Sie fahren? ", "String") as string;
   const bc: number = await eingabe("Bahncard 50, 25, 0? ", "Int") as number;
-  const ruek: boolean = await eingabe("Möchten Sie zurückfahren?") as boolean;
-
+  const ruek: string = await eingabe("Moechten Sie zurueckfahren?", "String") as string;
   let preis = fahrpreis(ziel);
-  console.log(preis);
-  // Weitere Logik...
+
+  if (ruek == "Ja" || ruek == "ja") {
+    preis = HinUndRueck(preis);
+  }
+  if (bc == 25 || bc == 50) {
+     preis = BerechneBahncard(preis, bc);
+  }
+  bezahlen(preis);
 }
 
 main();
@@ -68,6 +97,6 @@ main();
 // Fahrpreise nach Ziel findet man in bahn.de.
 // Ziele sind Berlin, Hamburg, München, Ulm, Köln von deinem Heimatort aus.
 // Erst wird die Funktion berechneFahrpreis(ziel) aufgerufen.
-// HbinUndRueck(preis) => wenn man hin und zurück mit ja oder true preis * 2.
+// HinUndRueck(preis) => wenn man hin und zurück mit ja oder true preis * 2.
 // BerechneBahncard(preis, bc) => Wenn man Bahncard 50 oder 25 eingegeben hat.
 // bezahlen(preis) => hier bitte die function eingabe(message, datatyp) zum zahlen verwenden.
