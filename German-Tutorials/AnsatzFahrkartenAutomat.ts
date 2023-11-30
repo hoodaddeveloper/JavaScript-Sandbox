@@ -18,9 +18,24 @@ function fahrpreis(ziel: string): number {
   switch (ziel) {
     case "Hamburg":
     case "hamburg":
-      preis = 100
+      preis = 125
       break;
-
+    case "Köln":
+    case "köln":
+      preis = 11
+      break;
+    case "Berlin":
+    case "berlin":
+      preis = 151
+      break;
+    case "München":
+    case "münchen":
+      preis = 173
+      break;
+    case "Ulm":
+    case "ulm":
+      preis = 125
+      break;
     default:
       break;
   }
@@ -38,3 +53,16 @@ async function main(): Promise<void> {
 }
 
 main();
+
+/// /// /// /// /// START des PROGRAMMS /// /// /// /// ///
+
+// Das Programm Fahrkarten Automat die einen Fahrkartenautomat simuliert
+ 
+// Message ist "Wohin wollen Sie fahren?" oder "Bahncard 50, 25, 0?".
+// Eingabe aller werte: Ziel (Eingabe der Stadt), Hin und zurück (Eingabe als 1:0, True:False, ja:nein, Bahncard (Eingabe 25, 50, 0).
+// Fahrpreise nach Ziel findet man in bahn.de.
+// Ziele sind Berlin, Hamburg, München, Ulm, Koeln von deinem Heimatort aus.
+// Erst wird die Funktion berechneFahrpreis (ziel) aufgerufen.
+// HbinUndRueck (preis) => wenn man hin und zurück mit ja oder true preis * 2.
+// Berechne Bahncard (preis, bc) => Wenn man Bahncard 50 oder 25 eingegeben hat.
+// bezahlen (preis) => hier bitte die function eingabe(message, datatyp) zum zahlen verwenden.
