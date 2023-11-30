@@ -50,7 +50,7 @@ async function main() {
 main();
 
 /*
-function berechneFahrpreis(ziel: string): number
+function berechneFahrpreis (ziel: string): number
 
 {
   let preis = 0;
@@ -73,8 +73,8 @@ function main(): void
 
   // Und nun sollten die Funktionen ausgearbeitet werden:
 
-  // preis = berechneFahrpreis (ziel);                        => Hamburg(HH), Berlin(B), München(M), Saarbrücken (SB)
-  // preis = hinUndRueck (preis);                             => Bitte nur aufrufen wenn hinzu=1(true) false(0),
+  // preis = berechneFahrpreis (ziel);                        => Hamburg (HH), Berlin (B), München (M), Saarbrücken (SB)
+  // preis = hinUndRueck (preis);                             => Bitte nur aufrufen wenn hinzu=1 (true) false (0),
   // preis = bahncard (preis, bd)                             => Bitte nur aufrufen wenn bc 25 oder 50
   // bezahlen (preis);                                        => In dieser Funktion wird auch durch Kunden Eingabe bezahlt => eingabe() int Methode
 }
