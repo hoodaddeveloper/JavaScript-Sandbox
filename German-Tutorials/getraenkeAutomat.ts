@@ -78,7 +78,7 @@ async function main(): Promise<void> {
   if (angebot == "Ja" || angebot == "ja") {
     preis = doppelangebot(preis);
   }
-  if (muenze == 25 || muenze == 50) {
+  if (muenze == 1 || muenze == 2) {
     preis = BerechneDasGeld(preis, muenze);
   }
   bezahlen(preis);
