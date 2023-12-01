@@ -13,33 +13,46 @@ function eingabe(message: string, datatyp: string): string | number {
   return "";
 }
 
-function plus(z1:number, z2:number) {
+function plus(z1: number, z2: number) {
   console.log("was macht " + z1 + "+" + z2);
   return z1 + z2;
 }
 
-function minus(z1:number, z2:number) {
+function minus(z1: number, z2: number) {
   return z1 - z2;
 }
 
-function geteilt(z1:number, z2:number) {
+function geteilt(z1: number, z2: number) {
   return z1 / z2;
 }
 
 async function main(): Promise<void> {
   console.log("rechnenTrainer");
-  /* const ziel: string = await eingabe("Wohin wollen Sie fahren? ", "String") as string; */
   let z1 = Math.floor((Math.random() * 10));
   let z2 = Math.floor((Math.random() * 10));
   let op = Math.floor((Math.random() * 5));
-  /* let ergebnis1 = plus(z1, z2); */
+  /* let ergebnis = plus(z1, z2); */
   let ergebnis = 0;
 
-  if (z1 < z2) {
+  if (op == 1) {
+    ergebnis = plus(z1, z2);
+  }
+  
+  else if (op == 2) {
+    if (z1 < z2) {
+      ergebnis = minus(z1, z2);
+    } else {
+      ergebnis = minus(z2, z1);
+    }
+  }
+
+  /* ergebnis = geteilt(z1 * z2, z2); */
+
+  /* if (z1 < z2) {
     ergebnis = minus(z1, z2);
   } else {
     ergebnis = minus(z2, z1);
-  }
+  } */
 }
 
 main();
