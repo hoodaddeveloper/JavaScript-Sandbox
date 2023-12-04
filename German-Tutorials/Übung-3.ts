@@ -20,26 +20,31 @@ for (let i: number = 0; i < 5; i++) {
 }
 console.log("Ende x = ", x);
 
-///////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 function f2(a: number, b: number): number {
   return a + b;
 }
 
 function f1(a: number, b: string): number {
-  f2(a, b);
+  // Hier sollte das Ergebnis von f2 zurückgegeben werden
+  return f2(a, parseInt(b, 10)); // Die Zeichenkette 'b' muss in eine Zahl umgewandelt werden
 }
 
 function main(): void {
   let x: number = 10;
   let y: number = 20;
-  let z: number = f1(x, y);
+
+  // Die Variable z muss innerhalb der main-Funktion deklariert werden
+  let z: number = f1(x, y.toString());
+  console.log("Ergebnis von f1(x, y):", z);
+
+  let result = f1(y, "30");
+  console.log("Ergebnis von f1(y, 30):", result);
 }
 
-console.log("Ergebnis von f1(x, y):", z);
-
-let result = f1(y, "30");
-console.log("Ergebnis von f1(y, 30):", result);
+// main-Funktion aufrufen, um den Code auszuführen
+main();
 
 /* Probleme:
 
@@ -50,29 +55,3 @@ console.log("Ergebnis von f1(y, 30):", result);
 3. Die Variable z, die in der main-Funktion deklariert wird, wird außerhalb
 ihres Gültigkeitsbereichs verwendet. Sie ist nur innerhalb der main-Funktion sichtbar,
 deshalb wird ein Fehler auftreten, wenn ich versuche, auf sie außerhalb dieser Funktion zuzugreifen. */
-
-///////////////////////////////////////////
-
-function f2x(aa: number, bb: number): number {
-  return aa + bb;
-}
-
-function f1x(aa: number, bb: string): number {
-  // Hier sollte das Ergebnis von f2 zurückgegeben werden
-  return f2x(aa, parseInt(bb, 10)); // Die Zeichenkette 'b' muss in eine Zahl umgewandelt werden
-}
-
-function mainx(): void {
-  let xx: number = 10;
-  let yy: number = 20;
-
-  // Die Variable z muss innerhalb der main-Funktion deklariert werden
-  let zz: number = f1x(xx, yy.toString());
-  console.log("Ergebnis von f1(x, y):", zz);
-
-  let resultx = f1x(yy, "30");
-  console.log("Ergebnis von f1(y, 30):", resultx);
-}
-
-// main-Funktion aufrufen, um den Code auszuführen
-mainx();
