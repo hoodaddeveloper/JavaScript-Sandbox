@@ -28,7 +28,7 @@ function f2(a: number, b: number): number {
 
 function f1(a: number, b: string): number {
   // Hier sollte das Ergebnis von f2 zurückgegeben werden
-  return f2(a, parseInt(b, 10)); // Die Zeichenkette 'b' muss in eine Zahl umgewandelt werden
+  return f2(a, parseInt(b)); // Die Zeichenkette 'b' muss in eine Zahl umgewandelt werden
 }
 
 function main(): void {
