@@ -36,8 +36,21 @@ console.log(padRow("Hoodad!"));
 
 /// /// /// /// /// ///
 
-function addTwoNumbers(sum) {
-  return sum;
-}
+function addTwoNumbers(a, b) {
+  return a + b;
+};
 
-console.log(addTwoNumbers(5 + 10));
+let sum = 5 + 10;
+console.log(sum);
+
+/// /// /// /// /// ///
+
+function demo(name) {
+  const title = "Professor ";
+  return title + name;
+};
+
+console.log(demo("Hasanzadeh"));
+
+/// /// /// /// /// ///
+
