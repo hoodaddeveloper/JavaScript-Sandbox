@@ -17,3 +17,17 @@ console.log(`The temperature is ${kelvin} degrees Kelvin.
 The temperature is ${celsius} degrees Celsius.
 The temperature is ${fahrenheit} degrees Fahrenheit.
 The temperature is ${newton} degrees Newton.`);
+
+/// freeCodeCamp
+
+function demo() {
+  return "Functions are cool!";
+}
+
+console.log(demo());
+
+function padRow() {
+  return "Hello!";
+}
+
+console.log(padRow());
