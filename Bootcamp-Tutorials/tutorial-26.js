@@ -18,16 +18,26 @@ The temperature is ${celsius} degrees Celsius.
 The temperature is ${fahrenheit} degrees Fahrenheit.
 The temperature is ${newton} degrees Newton.`);
 
-/// freeCodeCamp
+/// freeCodeCamp ///
 
-function demo() {
-  return "Functions are cool!";
+function demo(esm) {
+  return esm;
 }
 
-console.log(demo());
+console.log(demo("Hello!"));
 
-function padRow() {
-  return "Hello!";
+/// /// /// /// /// ///
+
+function padRow(name) {
+  return name;
 }
 
-console.log(padRow());
+console.log(padRow("Hoodad!"));
+
+/// /// /// /// /// ///
+
+function addTwoNumbers(sum) {
+  return sum;
+}
+
+console.log(addTwoNumbers(5 + 10));
