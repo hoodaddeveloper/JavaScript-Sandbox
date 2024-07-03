@@ -182,3 +182,21 @@ let tool = 'marker';
 let writingUtensil = tool || 'pen';
 
 console.log(`The ${writingUtensil} is mightier than the sword.`);
+
+/// /// /// /// /// ///
+
+let isNightTime = true;
+
+if (isNightTime) {
+  console.log('Turn on the lights!');
+} else {
+  console.log('Turn off the lights!');
+}
+
+/// /// Ternary Operator /// ///
+
+let isNightTime2 = false;
+
+isNightTime2 ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+/// /// /// /// /// ///
