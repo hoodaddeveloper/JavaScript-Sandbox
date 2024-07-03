@@ -133,3 +133,17 @@ if (mood === "sleepy" && tirednessLevel > 8) {
 } else {
   console.log("not bed time yet");
 }
+
+/// /// /// /// /// ///
+
+let numberOfApples = 1;
+
+if (numberOfApples){
+   console.log('Let us eat apples!');
+} else {
+   console.log('No apples left!');
+}
+
+// Prints 'No apples left!'
+
+/// /// /// /// /// ///
