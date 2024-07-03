@@ -70,3 +70,17 @@ let dogYears = laterYears * 4;
 console.log(earlyYears);
 console.log(laterYears);
 console.log(dogYears);
+
+/// /// If statement /// ///
+
+function ifTrue() {
+  if (true) {
+    console.log("The message will print.");
+  }
+}
+
+ifTrue();
+
+/// /// /// /// /// ///
+
+let sale = true;
