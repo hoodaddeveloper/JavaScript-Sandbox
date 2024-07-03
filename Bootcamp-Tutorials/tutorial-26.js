@@ -104,6 +104,9 @@ if (hungerLevel > 7) {
 
 /// /// /// /// /// ///
 
+let stopLight = "green";
+pedestrians = 1;
+
 if (stopLight === 'green' && pedestrians === 0) {
   console.log('Go!');
 } else {
@@ -112,6 +115,8 @@ if (stopLight === 'green' && pedestrians === 0) {
 
 /// /// /// /// /// ///
 
+let day = 'Saturday';
+
 if (day === 'Saturday' || day === 'Sunday') {
   console.log('Enjoy the weekend!');
 } else {
@@ -119,3 +124,12 @@ if (day === 'Saturday' || day === 'Sunday') {
 }
 
 /// /// /// /// /// ///
+
+let mood = "sleepy";
+let tirednessLevel = 6;
+
+if (mood === "sleepy" && tirednessLevel > 8) {
+  console.log("time to sleep");
+} else {
+  console.log("not bed time yet");
+}
