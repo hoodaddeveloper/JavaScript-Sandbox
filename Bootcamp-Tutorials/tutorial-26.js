@@ -166,9 +166,9 @@ if (wordCount) {
   console.log('Better get to work!');
 }
 
-let favoritePhrase = ''; // falsy string
+let favoritePhrase2 = ''; // falsy string
 
-if (favoritePhrase) {
+if (favoritePhrase2) {
   console.log("This string doesn't seem to be empty.");
 } else {
   console.log('This string is definitely empty.');
@@ -198,5 +198,23 @@ if (isNightTime) {
 let isNightTime2 = false;
 
 isNightTime2 ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+/// /// /// /// /// ///
+
+let isLocked = false;
+
+isLocked ? console.log('You will need a key to open the door.') : console.log('You will not need a key to open the door.');
+
+/// /// /// /// /// ///
+
+let isCorrect = true;
+
+isCorrect ? console.log('Correct!') : console.log('Incorrect!');
+
+/// /// /// /// /// ///
+
+let favoritePhrase = 'Love That!';
+
+favoritePhrase === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
 
 /// /// /// /// /// ///
