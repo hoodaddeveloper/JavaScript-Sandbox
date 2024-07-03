@@ -136,14 +136,24 @@ if (mood === "sleepy" && tirednessLevel > 8) {
 
 /// /// /// /// /// ///
 
-let numberOfApples = 1;
+let numberOfApples = 0;
 
-if (numberOfApples){
-   console.log('Let us eat apples!');
+if (numberOfApples) {
+  console.log('Let us eat apples!');
 } else {
-   console.log('No apples left!');
+  console.log('No apples left!');
 }
 
 // Prints 'No apples left!'
+
+/// /// /// /// /// ///
+
+let myVariable = 'I Exist!';
+
+if (myVariable) {
+  console.log(myVariable)
+} else {
+  console.log('The variable does not exist.')
+}
 
 /// /// /// /// /// ///
