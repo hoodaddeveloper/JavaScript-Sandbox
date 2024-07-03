@@ -1,4 +1,4 @@
-/// Weather converter ///
+/// /// Weather converter /// ///
 
 // Kelvin temperature
 const kelvin = 100;
@@ -18,7 +18,7 @@ The temperature is ${celsius} degrees Celsius.
 The temperature is ${fahrenheit} degrees Fahrenheit.
 The temperature is ${newton} degrees Newton.`);
 
-/// freeCodeCamp ///
+/// /// freeCodeCamp /// ///
 
 function demo(esm) {
   return esm;
@@ -52,4 +52,21 @@ function demo(name) {
 
 console.log(demo("Hasanzadeh"));
 
-/// /// /// /// /// ///
+/// /// Dog years test /// ///
+
+// My age
+const myAge = 29;
+// Early years
+let earlyYears = 2;
+
+earlyYears *= 10.5;
+// Later years - my age
+let laterYears = myAge - 2;
+
+laterYears *= 4;
+// Dog years
+let dogYears = laterYears * 4;
+
+console.log(earlyYears);
+console.log(laterYears);
+console.log(dogYears);
