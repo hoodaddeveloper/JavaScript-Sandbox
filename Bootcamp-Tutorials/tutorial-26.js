@@ -282,3 +282,30 @@ switch (groceryItem2) {
 
 /// /// /// /// /// ///
 
+let athleteFinalPosition = 'first place';
+
+switch (athleteFinalPosition) {
+  case 'first place':
+    console.log('You get the gold medal!');
+    break;
+  case 'second place':
+    console.log('You get the silver medal!');
+    break;
+  case 'third place':
+    console.log('You get the bronze medal!');
+    break;
+  case "fourth place":
+    console.log("You get the blue medal!");
+    break;
+  case "fifth place":
+    console.log("You get the green medal!");
+    break;
+  case "sixth place":
+    console.log("You get the purple medal!");
+    break;
+  default:
+    console.log('No medal awarded.');
+    break;
+}
+
+console.log(athleteFinalPosition);
