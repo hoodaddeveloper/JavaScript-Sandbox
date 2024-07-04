@@ -282,7 +282,7 @@ switch (groceryItem2) {
 
 /// /// /// /// /// ///
 
-let athleteFinalPosition = 'first place';
+let athleteFinalPosition = 'second place';
 
 switch (athleteFinalPosition) {
   case 'first place':
@@ -304,8 +304,10 @@ switch (athleteFinalPosition) {
     console.log("You get the purple medal!");
     break;
   default:
-    console.log('No medal awarded.');
+    console.log('No medal awarded!');
     break;
 }
 
-console.log(athleteFinalPosition);
+// Prints "You get the silver medal!" 
+
+/// /// /// /// /// ///
