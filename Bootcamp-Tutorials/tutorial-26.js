@@ -308,6 +308,6 @@ switch (athleteFinalPosition) {
     break;
 }
 
-// Prints "You get the silver medal!" 
+// Prints "You get the silver medal!"
 
 /// /// /// /// /// ///
