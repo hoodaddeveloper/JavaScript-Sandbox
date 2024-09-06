@@ -5,6 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutorial 1</title>
+  <style>
+    #demo3 {
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      background: pink;
+      text-align: center;
+      font-weight: bolder;
+      border-radius: 30px;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,6 +27,15 @@
     onclick="document.getElementById('demo2').innerHTML = 'Text two!'">Text
     one!</div>
   <br><br>
+  <div id="demo3">H O O D A D</div>
+  <br>
+  <button onclick="document.getElementById('demo3').style.backgroundColor = 'lime'">Lime</button>
+  <button onclick="document.getElementById('demo3').style.borderRadius = '10px'">Border radius</button>
+  <button onclick="document.getElementById('demo3').style.color = 'white'">Text white</button>
+  <button onclick="document.getElementById('demo3').style.fontSize = '25px'">Font size</button>
+  <button onclick="document.getElementById('demo3').style.border = '4px dashed blue'">Border</button>
+  <button onclick="document.getElementById('demo3').style.border = 'none'">Border reset</button>
+  <br><br>
   <!-- JavaScript codes -->
   <script>
     /* Get 'hoodad' element by it`s 'id' */
@@ -23,7 +43,7 @@
     /* Writing a text with document.write() */
     document.write("Writing a text with 'document.write()' in HTML.");
     /* Showing an "alert" */
-    window.alert("This is an JS alert!");
+    /* window.alert("This is an JS alert!"); */
     /* SHowing in console */
     console.log("This is a console.log")
     /* Get element by it`s 'id' */
