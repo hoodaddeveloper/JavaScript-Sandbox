@@ -9,6 +9,13 @@
 
 <body>
   <h1 id="hoodad"></h1>
+  <h2 id="test"></h2>
+  <h2 id="demo">This is a text.</h2>
+  <button onclick="document.getElementById('demo').innerHTML = 'The text changed!'">Click me!</button>
+  <div style="background: greenyellow; display: inline-block;" id="demo2"
+    onclick="document.getElementById('demo2').innerHTML = 'Text two!'">Text
+    one!</div>
+  <br><br>
   <!-- JavaScript codes -->
   <script>
     /* Get 'hoodad' element by it`s 'id' */
@@ -19,6 +26,8 @@
     window.alert("This is an JS alert!");
     /* SHowing in console */
     console.log("This is a console.log")
+    /* Get element by it`s 'id' */
+    document.getElementById("test").innerHTML = "I got this element by it`s 'id'.";
   </script>
 </body>
 
