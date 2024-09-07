@@ -35,6 +35,11 @@
   <button onclick="document.getElementById('demo3').style.fontSize = '25px'">Font size</button>
   <button onclick="document.getElementById('demo3').style.border = '4px dashed blue'">Border</button>
   <button onclick="document.getElementById('demo3').style.border = 'none'">Border reset</button>
+  <!-- Turn on & off the lamp -->
+  <button style="margin-left: 50px;" onclick="document.getElementById('lampOFF').src = './images/ONbulb.jpg'">Turn
+    ON</button>
+  <img src="./images/OFFbulb.jpg" id="lampOFF">
+  <button onclick="document.getElementById('lampOFF').src = './images/OFFbulb.jpg'">Turn OFF</button>
   <br><br>
   <!-- JavaScript codes -->
   <script>
@@ -52,3 +57,11 @@
 </body>
 
 </html>
+
+<!--
+I can change these JavaScript attributes:
+
+- innerHTML = Change something inside the HTML file. For example Text.
+- style = Change all CSS styles.
+- src = Add or change images.
+-->
