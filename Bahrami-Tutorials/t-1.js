@@ -11,3 +11,22 @@ console.log(d++)
 console.log(d)
 
 console.log("-----------------")
+
+geld = true
+zeit = false
+
+if (geld && zeit) {
+  console.log("Wir gehen zur Urlaub.")
+} else {
+  console.log("Wir gehen nicht zur Urlaub.")
+}
+
+console.log("-----------------")
+
+if (geld || zeit) {
+  console.log("Wir gehen zur Urlaub.")
+} else {
+  console.log("Wir gehen nicht zur Urlaub.")
+}
+
+console.log("-----------------")
