@@ -61,3 +61,27 @@ switch (day) {
     console.log("Fehler!")
     break;
 }
+
+console.log("-----------------")
+
+/* Loops in JavaScript */
+
+let i = 1;
+let z = 1;
+
+while (i <= 10) {
+  console.log(`${z}.Hoodad`)
+  i++;
+  z++;
+}
+
+console.log("-----------------")
+
+let m = 1;
+let n = 1;
+
+do {
+  console.log(`${n}.Hoodad`)
+  m++;
+  n++;
+} while (m <= 10);
