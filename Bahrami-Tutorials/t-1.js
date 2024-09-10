@@ -1,19 +1,19 @@
-let myName = "Hoodad 'Wesker'"
+let myName = "Hoodad 'Wesker'";
 console.log(myName)
 
-let a = 2
-let b = 4
-let c = a ** b
+let a = 2;
+let b = 4;
+let c = a ** b;
 console.log(c)
 
-let d = 10
+let d = 10;
 console.log(d++)
 console.log(d)
 
 console.log("-----------------")
 
-geld = true
-zeit = false
+geld = true;
+zeit = false;
 
 if (geld && zeit) {
   console.log("Wir gehen zur Urlaub.")
@@ -33,7 +33,7 @@ console.log("-----------------")
 
 /* Switch Case */
 
-let day = 8
+let day = 8;
 
 switch (day) {
   case 1:
@@ -67,21 +67,49 @@ console.log("-----------------")
 /* Loops in JavaScript */
 
 let i = 1;
-let z = 1;
 
 while (i <= 10) {
-  console.log(`${z}.Hoodad`)
+  console.log(`${i}.Hoodad1`)
   i++;
-  z++;
 }
 
 console.log("-----------------")
 
 let m = 1;
-let n = 1;
 
 do {
-  console.log(`${n}.Hoodad`)
+  console.log(`${m}.Hoodad2`)
   m++;
-  n++;
 } while (m <= 10);
+
+console.log("-----------------")
+
+for (let x = 1; x <= 10; x++) {
+  console.log(`${x}.Hoodad3`)
+}
+
+console.log("-----------------")
+console.log("-----------------")
+console.log("-----------------")
+
+let e = 20;
+
+while (e >= 1) {
+  console.log(`${e}.while`)
+  e--;
+}
+
+console.log("-----------------")
+
+let r = 20;
+
+do {
+  console.log(`${r}.doWhile`)
+  r--;
+} while (r >= 1);
+
+console.log("-----------------")
+
+for (let t = 20; t >= 1; t--) {
+  console.log(`${t}.for`);
+}
