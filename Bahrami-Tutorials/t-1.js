@@ -113,3 +113,21 @@ console.log("-----------------")
 for (let t = 20; t >= 1; t--) {
   console.log(`${t}.for`);
 }
+
+console.log("-----------------")
+
+if (1 < 2) {
+  console.log("Yes!")
+} else {
+  console.log("No!")
+}
+
+console.log("-----------------")
+
+for (let j = 0; j <= 10; j++) {
+  console.log(`${j}.forJ`);
+
+  if (j == 5) {
+    break;
+  }
+}
