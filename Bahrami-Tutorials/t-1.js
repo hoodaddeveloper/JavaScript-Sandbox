@@ -156,3 +156,16 @@ for (let k = 1; k <= 5; k++) {
 console.log(star)
 
 console.log("-----------------")
+
+let str = '';
+
+for (let v = 1; v <= 5; v++) {
+  for (let c = 5; c >= v; c--) {
+    str += '*';
+  }
+  str += '\n';
+}
+
+console.log(str)
+
+console.log("-----------------")
