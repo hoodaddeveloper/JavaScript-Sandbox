@@ -117,9 +117,9 @@ for (let t = 20; t >= 1; t--) {
 console.log("-----------------")
 
 if (1 < 2) {
-  console.log("Yes!")
+  console.log("Yes!");
 } else {
-  console.log("No!")
+  console.log("No!");
 }
 
 console.log("-----------------")
@@ -131,3 +131,28 @@ for (let j = 0; j <= 10; j++) {
     break;
   }
 }
+
+console.log("-----------------")
+
+for (let ö = 1; ö <= 2; ö++) {
+  console.log("Outer" + ö);
+
+  for (let ä = 1; ä <= 3; ä++) {
+    console.log("Inner" + ä);
+  }
+}
+
+console.log("-----------------")
+
+let star = '';
+
+for (let k = 1; k <= 5; k++) {
+  for (let g = 1; g <= k; g++) {
+    star += '*';
+  }
+  star += '\n';
+}
+
+console.log(star)
+
+console.log("-----------------")
