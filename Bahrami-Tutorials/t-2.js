@@ -63,3 +63,19 @@ let average3 = sum3 / grades.length
 console.log(average3)
 
 console.log("--------------------")
+
+/* Array methods */
+
+let array3 = ["Ali", 20, "Ahmad", 30, "Hoodad", 40, "Hossein", 50, "Hasan"]
+
+console.log(array3.toString())
+/* Separate elements */
+console.log(array3.join(" * "))
+/* Remove last element */
+array3.pop()
+console.log(array3)
+/* Add new element */
+array3.push(60)
+console.log(array3)
+
+console.log("--------------------")
