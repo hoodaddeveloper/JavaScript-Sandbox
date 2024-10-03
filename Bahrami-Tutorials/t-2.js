@@ -24,7 +24,6 @@ for (let q = 0; q <= 8; q++) {
   }
 }
 
-
 console.log("--------------------")
 
 let grade1 = 10;
@@ -74,8 +73,18 @@ console.log(array3.join(" * "))
 /* Remove last element */
 array3.pop()
 console.log(array3)
-/* Add new element */
+/* Add new element at the end */
 array3.push(60)
 console.log(array3)
 
 console.log("--------------------")
+
+let array4 = ['Ali', 'Jassem', 'Taghi']
+
+/* Remove first element */
+array4.shift()
+console.log(array4)
+
+/* Add new element at start */
+array4.unshift('Hossein')
+console.log(array4)
