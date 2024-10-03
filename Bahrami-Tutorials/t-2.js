@@ -88,3 +88,5 @@ console.log(array4)
 /* Add new element at start */
 array4.unshift('Hossein')
 console.log(array4)
+
+console.log("--------------------")
