@@ -90,3 +90,13 @@ array4.unshift('Hossein')
 console.log(array4)
 
 console.log("--------------------")
+
+let array5 = [1, 2, 3, 4, 5]
+let array6 = [6, 7, 8, 9, 10]
+let array7 = [11, 12, 13, 14, 15]
+
+/* Merging arrays */
+array8 = array5.concat(array6, array7)
+console.log(array8)
+
+console.log("--------------------")
