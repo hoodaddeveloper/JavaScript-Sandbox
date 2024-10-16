@@ -100,3 +100,29 @@ array8 = array5.concat(array6, array7)
 console.log(array8)
 
 console.log("--------------------")
+
+let array9 = [12, 13.5, 14, 15.5, 16, 17.5, 18]
+let max = 0;
+
+for (let index = 0; index < array9.length; index++) {
+  if (array9[index] > max) {
+    max = array9[index]
+  }
+}
+
+console.log(max)
+
+console.log("--------------------")
+
+let array10 = [12, 13.5, 14, 15.5, 16, 17.5, 18]
+let min = array10[0] // Start with the first element as the minimum
+
+for (let index = 1; index < array10.length; index++) {
+  if (array10[index] < min) {
+    min = array10[index];
+  }
+}
+
+console.log(min)
+
+console.log("--------------------")
