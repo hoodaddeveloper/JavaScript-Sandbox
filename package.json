@@ -1,0 +1,20 @@
+{
+  "name": "javascript-sandbox",
+  "version": "1.0.0",
+  "description": "Multiple files for practicing JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoodaddeveloper/JavaScript-Sandbox.git"
+  },
+  "keywords": ["javaScript"],
+  "author": "Hoodad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoodaddeveloper/JavaScript-Sandbox/issues"
+  },
+  "homepage": "https://github.com/hoodaddeveloper/JavaScript-Sandbox#readme"
+}
