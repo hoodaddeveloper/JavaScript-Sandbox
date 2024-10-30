@@ -138,3 +138,11 @@ function hoodad() {
 hoodad()
 
 /* Function expression */
+
+let wesker = function() {
+  console.log("Hoodad 4")
+  console.log("Hoodad 5")
+  console.log("Hoodad 6")
+}
+
+wesker()
