@@ -126,3 +126,15 @@ for (let index = 1; index < array10.length; index++) {
 console.log(min)
 
 console.log("--------------------")
+
+/* Function declaration */
+
+function hoodad() {
+  console.log("Hoodad 1")
+  console.log("Hoodad 2")
+  console.log("Hoodad 3")
+}
+
+hoodad()
+
+/* Function expression */
