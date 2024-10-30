@@ -159,7 +159,7 @@ exampble(10, 15)
 
 console.log("--------------------")
 
-let math = function(a, b) {
+let math = function (a, b) {
   console.log(a + b)
   console.log(a - b)
   console.log(a * b)
