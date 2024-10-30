@@ -139,10 +139,32 @@ hoodad()
 
 /* Function expression */
 
-let wesker = function() {
+let wesker = function () {
   console.log("Hoodad 4")
   console.log("Hoodad 5")
   console.log("Hoodad 6")
 }
 
 wesker()
+
+console.log("--------------------")
+
+function exampble(a1, a2) {
+  console.log(a1 + a2)
+  console.log(a1 - a2)
+  console.log(a1 * a2)
+}
+
+exampble(10, 15)
+
+console.log("--------------------")
+
+let math = function(a, b) {
+  console.log(a + b)
+  console.log(a - b)
+  console.log(a * b)
+}
+
+math(10, 5)
+
+console.log("--------------------")
