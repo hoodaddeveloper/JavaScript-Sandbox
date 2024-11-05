@@ -168,3 +168,20 @@ let math = function (a, b) {
 math(10, 5)
 
 console.log("--------------------")
+
+let num1 = 12
+let num2 = 10
+let num3 = 12.5
+let num4 = 13
+let num5 = 15.5
+
+let total = num1 + num2 + num3 + num4 + num5
+let av = total / 5
+
+console.log(av)
+
+if (av >= 12) {
+  console.log("Passed!")
+} else {
+  console.log("Failed!")
+}
