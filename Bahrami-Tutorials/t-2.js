@@ -173,7 +173,7 @@ let num1 = 12
 let num2 = 10
 let num3 = 12.5
 let num4 = 13
-let num5 = 15.5
+let num5 = 10.5
 
 let total = num1 + num2 + num3 + num4 + num5
 let av = total / 5
@@ -185,3 +185,22 @@ if (av >= 12) {
 } else {
   console.log("Failed!")
 }
+
+console.log("--------------------")
+
+function calculateAverage(num1, num2, num3, num4, num5) {
+  let total2 = num1 + num2 + num3 + num4 + num5
+  let av2 = total2 / 5
+
+  console.log(av2)
+
+  if (av2 >= 12) {
+    console.log("Passed!")
+  } else {
+    console.log("Failed!")
+  }
+}
+
+calculateAverage(18, 17.5, 20, 15.5, 18)
+
+console.log("--------------------")
