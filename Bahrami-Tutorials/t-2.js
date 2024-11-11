@@ -204,3 +204,18 @@ function calculateAverage(num1, num2, num3, num4, num5) {
 calculateAverage(18, 17.5, 20, 15.5, 18)
 
 console.log("--------------------")
+
+/* Arrow function */
+
+let funk1 = function () {
+  console.log("Function 1")
+}
+
+funk1()
+
+/* Now do it with arrow function */
+
+let funk2 = () => console.log("Function 2")
+funk2()
+
+console.log("--------------------")
