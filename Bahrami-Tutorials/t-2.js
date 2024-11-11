@@ -219,3 +219,17 @@ let funk2 = () => console.log("Function 2")
 funk2()
 
 console.log("--------------------")
+
+let funk3 = function(aa, bb) {
+  return aa + bb
+}
+
+console.log(funk3(5, 10))
+
+/* Now do it with arrow function */
+
+let funk4 = (aa2, bb2) => aa2 + bb2
+
+console.log(funk4(5, 5))
+
+console.log("--------------------")
