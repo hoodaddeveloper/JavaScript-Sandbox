@@ -220,7 +220,7 @@ funk2()
 
 console.log("--------------------")
 
-let funk3 = function(aa, bb) {
+let funk3 = function (aa, bb) {
   return aa + bb
 }
 
@@ -231,5 +231,21 @@ console.log(funk3(5, 10))
 let funk4 = (aa2, bb2) => aa2 + bb2
 
 console.log(funk4(5, 5))
+
+console.log("--------------------")
+
+/* Callback function */
+
+function firstFunction() {
+  console.log("First function")
+  secondFunction()
+}
+
+firstFunction()
+
+function secondFunction() {
+  console.log("Second function")
+  firstFunction()
+}
 
 console.log("--------------------")
