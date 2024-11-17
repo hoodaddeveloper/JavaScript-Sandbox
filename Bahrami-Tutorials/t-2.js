@@ -236,7 +236,7 @@ console.log("--------------------")
 
 /* Callback function */
 
-function firstFunction() {
+/* function firstFunction() {
   console.log("First function")
   secondFunction()
 }
@@ -246,6 +246,19 @@ firstFunction()
 function secondFunction() {
   console.log("Second function")
   firstFunction()
+} */
+
+console.log("--------------------")
+
+/* Objects in JavaScript */
+
+const hoodadObj = {
+  age: 30,
+  height: 174,
+  isMarried: true,
+  friends: ["Ali", "Akbar", "Hossein"]
 }
+
+console.log(hoodadObj)
 
 console.log("--------------------")
