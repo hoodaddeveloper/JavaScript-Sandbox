@@ -1,6 +1,6 @@
 /* Learning JavaScript ES6 for REACT */
 
-/* Ternamy Operator */
+/* Ternary Operator */
 let age = 25;
 age > 18 ? console.log("You are older than 18!") : console.log("You are under 18!")
 
