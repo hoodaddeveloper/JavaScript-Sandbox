@@ -27,11 +27,11 @@ hello1("Mohammad")
 
 /// /// /// /// /// ///
 
-let hello2 = function(adad) {
-  console.log("Hello my age is " + adad)
+let hello2 = function (adad) {
+  return "Hello my age is " + adad
 }
 
-hello2(30)
+console.log(hello2(30))
 
 /// /// /// /// /// ///
 
