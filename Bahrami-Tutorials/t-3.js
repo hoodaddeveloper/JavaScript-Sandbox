@@ -16,3 +16,25 @@ let myAge = 30
 console.log(`My name is ${myName} and I am ${myAge} years old.`)
 
 /// /// /// /// /// ///
+
+// ES6 Functions
+
+function hello1(esm) {
+  console.log("Hello " + esm)
+}
+
+hello1("Mohammad")
+
+/// /// /// /// /// ///
+
+let hello2 = function(adad) {
+  console.log("Hello my age is " + adad)
+}
+
+hello2(30)
+
+/// /// /// /// /// ///
+
+let hello3 = (name) => console.log(`Hello ${name}`)
+
+hello3("Wesker")
