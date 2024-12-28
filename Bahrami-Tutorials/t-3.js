@@ -38,3 +38,21 @@ console.log(hello2(30))
 let hello3 = (name) => console.log(`Hello ${name}`)
 
 hello3("Wesker")
+
+/// /// /// /// /// ///
+
+// Rest operator
+
+function sum(...hoodad) {
+  console.log(hoodad)
+}
+
+sum(5, 5, 5)
+
+// Spread operator
+
+let arr1 = [1, 2, 3]
+let arr2 = [4, 5, 6]
+let arr3 = [...arr1, ...arr2]
+
+console.log(arr3)
