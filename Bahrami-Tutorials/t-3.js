@@ -56,3 +56,27 @@ let arr2 = [4, 5, 6]
 let arr3 = [...arr1, ...arr2]
 
 console.log(arr3)
+
+/// /// /// /// /// ///
+
+const person = {
+  firstName: "Hoodad",
+  lastName: "Wesker",
+  age: 30,
+  coding: function () {
+    console.log("Hoodad is coding")
+  },
+  skills: {
+    html: 100,
+    css: 90,
+    js: 80,
+    react: 70
+  }
+}
+
+console.log(typeof person)
+console.log(person.firstName)
+console.log(person.age)
+console.log(person.skills)
+console.log(person.skills.html)
+person.coding()
