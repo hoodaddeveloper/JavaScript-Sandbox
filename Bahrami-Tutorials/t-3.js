@@ -80,3 +80,20 @@ console.log(person.age)
 console.log(person.skills)
 console.log(person.skills.html)
 person.coding()
+
+// Function construcctor
+
+function Person() {
+  this.firstName = "Hoodad",
+    this.lastName = "Wesker",
+    this.age = 30,
+    this.coding = function () {
+      console.log("Hoodad is coding")
+    },
+    this.skills = {
+      html: 100,
+      css: 90,
+      js: 80,
+      react: 70
+    }
+}
