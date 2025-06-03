@@ -84,16 +84,25 @@ person.coding()
 // Function construcctor
 
 function Person() {
-  this.firstName = "Hoodad",
+  this.firstName = "Albert",
     this.lastName = "Wesker",
-    this.age = 30,
+    this.age = 45,
     this.coding = function () {
-      console.log("Hoodad is coding")
+      console.log("Albert is coding")
     },
     this.skills = {
       html: 100,
-      css: 90,
-      js: 80,
-      react: 70
+      css: 100,
+      js: 100,
+      react: 100
     }
 }
+
+const personX = new Person()
+
+console.log(typeof personX)
+console.log(personX.firstName)
+console.log(personX.age)
+console.log(personX.skills)
+console.log(personX.skills.html)
+personX.coding()
