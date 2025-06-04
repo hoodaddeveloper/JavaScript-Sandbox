@@ -106,3 +106,11 @@ console.log(personX.age)
 console.log(personX.skills)
 console.log(personX.skills.html)
 personX.coding()
+
+/// /// /// /// /// ///
+
+function addNumber(n1, n2) {
+  console.log(n1 + n2)
+}
+
+addNumber(7, 5)
