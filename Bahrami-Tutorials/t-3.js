@@ -119,7 +119,7 @@ addNumber(7, 5)
 /// JavaScript ES6 Classes ///
 /////////////////////////////
 
-class ClassNameX {
+class ClassNameY {
   // code
 }
 
@@ -131,3 +131,28 @@ class ClassNameX {
 let objectName = new ClassNameX()
 
 /// /// /// /// /// ///
+
+class Car {
+  constructor(name, year, color) {
+    this.name = name
+    this.year = year
+    this.color = color
+  }
+  age() {
+    let d = new Date()
+    return d.getFullYear() - this.year
+  }
+  info() {
+    return `
+    Car Name: ${this.name}
+    Car Year: ${this.year}
+    Car Age: ${this.age()} Years
+    Car Color: ${this.color}
+    `
+  }
+}
+
+let car1 = new Car("Porsche", 2010, "Black")
+console.log(car1)
+console.log(car1.age())
+console.log(car1.info())
