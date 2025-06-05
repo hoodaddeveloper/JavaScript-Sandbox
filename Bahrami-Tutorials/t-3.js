@@ -114,3 +114,20 @@ function addNumber(n1, n2) {
 }
 
 addNumber(7, 5)
+
+/// /// /// /// /// /// /// ///
+/// JavaScript ES6 Classes ///
+/////////////////////////////
+
+class ClassNameX {
+  // code
+}
+
+class ClassNameX {
+  constructor() { }
+  // code
+}
+
+let objectName = new ClassNameX()
+
+/// /// /// /// /// ///
