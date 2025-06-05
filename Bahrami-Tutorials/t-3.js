@@ -156,3 +156,27 @@ let car1 = new Car("Porsche", 2010, "Black")
 console.log(car1)
 console.log(car1.age())
 console.log(car1.info())
+
+/// JavaScript ES6 Class Inheritance ///
+
+class Human {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+}
+
+class Student extends Human {
+  constructor(name, age, field, school) {
+    super(name, age)
+    this.field = field
+    this.school = school
+  }
+}
+
+class Athele {
+
+}
+
+let obj = new Student("Hoodad", 30, "Computer", "Umbrella")
+console.log(obj)
